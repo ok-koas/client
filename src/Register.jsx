@@ -5,7 +5,6 @@ import Footer from "./components/Footer";
 const Register = () => {
   return (
     <>
-      <Navbar />
       <div className="container mx-auto px-4 py-20">
         <div className="bg-white shadow-md rounded-lg p-8 max-w-lg mx-auto">
           <h2 className="text-2xl font-bold mb-6 text-center">Registrasi Pengguna</h2>

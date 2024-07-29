@@ -73,9 +73,9 @@ const Navbar = () => {
             </li>
             <li>
               <Link
-                to="/tentangkami"
+                to="/tentang-kami"
                 className={`block py-2 px-3 rounded md:bg-transparent md:p-0 ${
-                  pathname === "/tentangkami" ? "text-blue-700" : "text-black"
+                  pathname === "/tentang-kami" ? "text-blue-700" : "text-black"
                 }`}
                 onClick={handleLinkClick}
               >

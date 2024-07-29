@@ -7,7 +7,7 @@ import Produk from "./components/Produk";
 import Hooker from "./components/Hooker";
 import Footer from "./components/Footer";
 import TentangKami from "./TentangKami";
-import Register from "./Register";  // Import the Register component
+import Register from "./Register"; // Import the Register component
 import ErrorPage from "./error-page";
 
 const router = createBrowserRouter([
@@ -28,12 +28,22 @@ const router = createBrowserRouter([
     errorElement: <ErrorPage />,
   },
   {
-    path: "/tentangkami",
-    element: <TentangKami />,
+    path: "/tentang-kami",
+    element: (
+      <div>
+        <Navbar />
+        <TentangKami />
+      </div>
+    ),
   },
   {
-    path: "/register",  // Define the route for Register component
-    element: <Register />,
+    path: "/register", // Define the route for Register component
+    element: (
+      <div>
+        <Navbar />
+        <Register />
+      </div>
+    ),
   },
 ]);
 
