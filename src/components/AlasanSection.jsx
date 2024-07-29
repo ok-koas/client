@@ -12,7 +12,7 @@ const AlasanSection = () => {
         sehari-hari.
         <span className="text-orange-500 text-4xl font-bold">&rdquo;</span> 
       </p>
-    </section>
+    </section>  
   );
 };
 
