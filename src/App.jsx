@@ -7,8 +7,10 @@ import Produk from "./components/Produk";
 import Hooker from "./components/Hooker";
 import Footer from "./components/Footer";
 import TentangKami from "./TentangKami";
-import Register from "./Register"; // Import the Register component
+import Register from "./Register";
 import ErrorPage from "./error-page";
+import Error404 from "./Error404";
+import Error500 from "./Error500";
 
 const router = createBrowserRouter([
   {
@@ -16,7 +18,7 @@ const router = createBrowserRouter([
     element: (
       <div>
         <Navbar />
-        <main className="px-4  md:px-8 lg:px-16">
+        <main className="px-4 md:px-8 lg:px-16">
           <HeroSection />
           <AlasanSection />
           <Produk />
@@ -35,15 +37,20 @@ const router = createBrowserRouter([
         <TentangKami />
       </div>
     ),
+    errorElement: <ErrorPage />,
   },
   {
-    path: "/register", // Define the route for Register component
-    element: (
-      <div>
-        <Navbar />
-        <Register />
-      </div>
-    ),
+    path: "/register",
+    element: <Register />,
+    errorElement: <ErrorPage />,
+  },
+  {
+    path: "*",
+    element: <Error404 />,
+  },
+  {
+    path: "/error500",
+    element: <Error500 />,
   },
 ]);
 
