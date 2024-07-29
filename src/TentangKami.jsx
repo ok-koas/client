@@ -6,7 +6,7 @@ import DoubleRegisterButton from "./components/DoubleRegisterButton";
 const TentangKami = () => {
   return (
     <>
-      <div className="container mx-auto px-40 py-16">
+      <div className="container mt-10 mx-auto px-40 py-16">
         <h1 className="text-3xl font-bold mb-6">Tentang OK-Koas</h1>
         <div className="flex flex-col md:flex-row items-center">
           <div className="md:w-1/2">
@@ -324,7 +324,6 @@ const TentangKami = () => {
           </div>
         </div>
       </div>
-      <Footer />
     </>
   );
 };

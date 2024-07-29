@@ -35,13 +35,20 @@ const router = createBrowserRouter([
       <div>
         <Navbar />
         <TentangKami />
+        <Footer />
       </div>
     ),
     errorElement: <ErrorPage />,
   },
   {
     path: "/register",
-    element: <Register />,
+    element: (
+      <div>
+        <Navbar />
+        <Register />
+        <Footer />
+      </div>
+    ),
     errorElement: <ErrorPage />,
   },
   {

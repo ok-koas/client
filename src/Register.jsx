@@ -10,7 +10,7 @@ const Register = () => {
     const formErrors = {};
 
     const fields = ["password", "ulangiPassword", "kodePos", "kelurahan"];
-    fields.forEach(field => {
+    fields.forEach((field) => {
       const value = event.target[field].value.trim();
       if (!value) {
         formErrors[field] = "Field is required";
@@ -42,33 +42,35 @@ const Register = () => {
                 placeholder="Nama Lengkap"
               />
             </div>
-            <div className="mb-4">
-              <label
-                className="block text-gray-700 text-sm font-bold mb-2"
-                htmlFor="username"
-              >
-                Username
-              </label>
-              <input
-                type="text"
-                id="username"
-                className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
-                placeholder="Username"
-              />
-            </div>
-            <div className="mb-4">
-              <label
-                className="block text-gray-700 text-sm font-bold mb-2"
-                htmlFor="nomorHandphone"
-              >
-                Nomor Handphone
-              </label>
-              <input
-                type="text"
-                id="nomorHandphone"
-                className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
-                placeholder="Nomor Handphone"
-              />
+            <div className="grid grid-cols-2 gap-5">
+              <div className="mb-4">
+                <label
+                  className="block text-gray-700 text-sm font-bold mb-2"
+                  htmlFor="username"
+                >
+                  Username
+                </label>
+                <input
+                  type="text"
+                  id="username"
+                  className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+                  placeholder="Username"
+                />
+              </div>
+              <div className="mb-4">
+                <label
+                  className="block text-gray-700 text-sm font-bold mb-2"
+                  htmlFor="nomorHandphone"
+                >
+                  Nomor Handphone
+                </label>
+                <input
+                  type="text"
+                  id="nomorHandphone"
+                  className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+                  placeholder="Nomor Handphone"
+                />
+              </div>
             </div>
             <div className="mb-4">
               <label
@@ -84,7 +86,7 @@ const Register = () => {
                 placeholder="Email"
               />
             </div>
-            <div className="mb-4 grid grid-cols-2 gap-4">
+            <div className="mb-4 grid grid-cols-2 gap-5">
               <div>
                 <label
                   className="block text-gray-700 text-sm font-bold mb-2"
@@ -167,11 +169,12 @@ const Register = () => {
                   (tanpa kelurahan, kecamatan, kota, dan provinsi)
                 </span>
               </label>
-              <input
+              <textarea
                 type="text"
                 id="alamat"
                 className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
-                placeholder="Alamat"
+                placeholder="Contoh: Jalan Cempaka Raya No. 12, Rt.2/Rw.3"
+                rows={2}
               />
             </div>
             <div className="mb-4 grid grid-cols-2 gap-4">
@@ -278,7 +281,7 @@ const Register = () => {
                 )}
               </div>
             </div>
-            <div className="mb-4 grid grid-cols-2 gap-4">
+            <div className="mb-4 grid grid-cols-2 gap-5">
               <div>
                 <label
                   className="block text-gray-700 text-sm font-bold mb-2"
@@ -286,41 +289,47 @@ const Register = () => {
                 >
                   Riwayat Kesehatan
                 </label>
-                <input
+                <textarea
                   type="text"
                   id="riwayatKesehatan"
-                  className="shadow appearance-none border-r-2 h-48 rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+                  className="shadow appearance-none border-r-2  rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
                   placeholder="Riwayat Kesehatan"
+                  rows={6}
                 />
               </div>
               <div>
-                <label
-                  className="block text-gray-700 text-sm font-bold mb-2"
-                  htmlFor="nomorAsuransi"
-                >
-                  Asuransi
-                </label>
-                <input
-                  type="text"
-                  id="Asuransi"
-                  className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
-                  placeholder="Asuransi"
-                />
+                <div className="mb-5">
+                  <label
+                    className="block text-gray-700 text-sm font-bold mb-2"
+                    htmlFor="nomorAsuransi"
+                  >
+                    Asuransi <span className="text-gray-500">(Opsional)</span>
+                  </label>
+                  <input
+                    type="text"
+                    id="Asuransi"
+                    className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+                    placeholder="Asuransi"
+                  />
+                </div>
+                <div>
+                  <label
+                    className="block text-gray-700 text-sm font-bold mb-2 "
+                    htmlFor="asuransi"
+                  >
+                    Nomor Asuransi{" "}
+                    <span className="text-gray-500">
+                      (Harus diisi jika memiliki asuransi)
+                    </span>
+                  </label>
+                  <input
+                    type="text"
+                    id="Nomor asuransi"
+                    className="shadow appearance-none border rounded w-full py-2 px-4 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+                    placeholder="Nomor Asuransi"
+                  />
+                </div>
               </div>
-            </div>
-            <div className="mb-4 ml-80">
-              <label
-                className="block text-gray-700 text-sm font-bold mb-2 "
-                htmlFor="asuransi"
-              >
-                Nomor Asuransi
-              </label>
-              <input
-                type="text"
-                id="Nomor asuransi"
-                className="shadow appearance-none border rounded w-full py-2 px-4 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
-                placeholder="Nomor Asuransi"
-              />
             </div>
             <div className="text-center">
               <button
@@ -341,7 +350,6 @@ const Register = () => {
           </form>
         </div>
       </div>
-      <Footer />
     </>
   );
 };

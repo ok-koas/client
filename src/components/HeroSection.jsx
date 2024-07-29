@@ -6,7 +6,7 @@ const HeroSection = () => {
     <>
       <div className="flex flex-col md:flex-row items-center justify-center py-16 bg-blue-50">
         <div className="w-full md:w-1/2 text-center md:text-left px-4 md:px-0">
-          <h1 className="text-l lg:text-xl font-bold text-gray- md:mt-0 mt-4 md:mb-0 mb-4">
+          <h1 className="text-l lg:text-xl font-bold text-gray-500 md:mt-0 mt-4 md:mb-0 mb-4">
             Selamat Datang di OK-Koas
           </h1>
           <p className="text-xl lg:text-2xl mt-4 font-bold md:mt-0">
