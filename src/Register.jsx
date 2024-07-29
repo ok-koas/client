@@ -36,6 +36,7 @@ const Register = () => {
                 Nama Lengkap
               </label>
               <input
+                name="full_name"
                 type="text"
                 id="namaLengkap"
                 className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
@@ -51,6 +52,7 @@ const Register = () => {
                   Username
                 </label>
                 <input
+                  name="username"
                   type="text"
                   id="username"
                   className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
@@ -65,8 +67,10 @@ const Register = () => {
                   Nomor Handphone
                 </label>
                 <input
-                  type="text"
+                  name="phone_number"
+                  type="number"
                   id="nomorHandphone"
+                  min={0}
                   className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
                   placeholder="Nomor Handphone"
                 />
@@ -80,6 +84,7 @@ const Register = () => {
                 Email (Opsional)
               </label>
               <input
+                name="email"
                 type="email"
                 id="email"
                 className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
@@ -95,6 +100,7 @@ const Register = () => {
                   Password
                 </label>
                 <input
+                  name="password"
                   type="password"
                   id="password"
                   className={`shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline ${
@@ -116,6 +122,7 @@ const Register = () => {
                   Ulangi Password
                 </label>
                 <input
+                  name="repeat_password"
                   type="password"
                   id="ulangiPassword"
                   className={`shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline ${
@@ -139,6 +146,7 @@ const Register = () => {
                   Kota Tempat Lahir
                 </label>
                 <input
+                  name="place_of_birth"
                   type="text"
                   id="kotaTempatLahir"
                   className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
@@ -153,6 +161,7 @@ const Register = () => {
                   Tanggal Lahir
                 </label>
                 <input
+                  name="date_of_birth"
                   type="date"
                   id="tanggalLahir"
                   className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
@@ -170,6 +179,7 @@ const Register = () => {
                 </span>
               </label>
               <textarea
+                name="address"
                 type="text"
                 id="alamat"
                 className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
@@ -186,6 +196,7 @@ const Register = () => {
                   Negara
                 </label>
                 <input
+                  name="country"
                   type="text"
                   id="negara"
                   className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
@@ -200,6 +211,7 @@ const Register = () => {
                   Provinsi
                 </label>
                 <input
+                  name="province"
                   type="text"
                   id="provinsi"
                   className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
@@ -216,6 +228,7 @@ const Register = () => {
                   Kota
                 </label>
                 <input
+                  name="city"
                   type="text"
                   id="kota"
                   className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
@@ -230,6 +243,7 @@ const Register = () => {
                   Kecamatan
                 </label>
                 <input
+                  name="district"
                   type="text"
                   id="kecamatan"
                   className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
@@ -246,6 +260,7 @@ const Register = () => {
                   Kelurahan
                 </label>
                 <input
+                  name="subdistrict"
                   type="text"
                   id="kelurahan"
                   className={`shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline ${
@@ -267,6 +282,7 @@ const Register = () => {
                   Kode Pos
                 </label>
                 <input
+                  name="postal_code"
                   type="text"
                   id="kodePos"
                   className={`shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline ${
@@ -290,6 +306,7 @@ const Register = () => {
                   Riwayat Kesehatan
                 </label>
                 <textarea
+                  name="medical_history"
                   type="text"
                   id="riwayatKesehatan"
                   className="shadow appearance-none border-r-2  rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
@@ -301,11 +318,12 @@ const Register = () => {
                 <div className="mb-5">
                   <label
                     className="block text-gray-700 text-sm font-bold mb-2"
-                    htmlFor="nomorAsuransi"
+                    htmlFor="Asuransi"
                   >
                     Asuransi <span className="text-gray-500">(Opsional)</span>
                   </label>
                   <input
+                    name="insurance_name"
                     type="text"
                     id="Asuransi"
                     className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
@@ -317,12 +335,13 @@ const Register = () => {
                     className="block text-gray-700 text-sm font-bold mb-2 "
                     htmlFor="asuransi"
                   >
-                    Nomor Asuransi{" "}
+                    Nomor Polis Asuransi{" "}
                     <span className="text-gray-500">
                       (Harus diisi jika memiliki asuransi)
                     </span>
                   </label>
                   <input
+                    name="insurance_policy_number"
                     type="text"
                     id="Nomor asuransi"
                     className="shadow appearance-none border rounded w-full py-2 px-4 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
@@ -334,7 +353,7 @@ const Register = () => {
             <div className="text-center">
               <button
                 type="submit"
-                className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline"
+                className="bg-red-500 hover:bg-red-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline"
               >
                 Daftar Sekarang
               </button>
@@ -343,8 +362,9 @@ const Register = () => {
               <span className="text-gray-600">Atau</span>
             </div>
             <div className="text-center mt-2">
-              <a href="/login" className="text-blue-500 hover:text-blue-700">
-                Sudah mempunyai akun? Masuk
+              Sudah mempunyai akun?
+              <a href="/login" className="text-red-500 hover:text-red-700">
+                &nbsp;Masuk
               </a>
             </div>
           </form>

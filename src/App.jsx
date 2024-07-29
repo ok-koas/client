@@ -11,6 +11,7 @@ import Register from "./Register";
 import ErrorPage from "./error-page";
 import Error404 from "./Error404";
 import Error500 from "./Error500";
+import Hooker2 from "./components/Hooker2";
 
 const router = createBrowserRouter([
   {
@@ -22,7 +23,7 @@ const router = createBrowserRouter([
           <HeroSection />
           <AlasanSection />
           <Produk />
-          <Hooker />
+          <Hooker2 />
         </main>
         <Footer />
       </div>
