@@ -7,9 +7,19 @@ import {
   FaLock,
   FaGlobe,
   FaMapPin,
+  FaCalendarDay,
+  FaMapSigns,
+  FaMapMarked,
+  FaCity,
+  FaMountain,
+  FaMap,
+  FaRegBuilding,
+  FaUserNurse,
+  FaHouseUser,
+  FaLockOpen,
+  FaRegUser,
+  FaUserTag,
 } from "react-icons/fa";
-import Navbar from "./components/Navbar";
-import Footer from "./components/Footer";
 
 const Register = () => {
   const [errors, setErrors] = useState({});
@@ -65,7 +75,7 @@ const Register = () => {
                   Username
                 </label>
                 <div className="flex items-center border rounded-md">
-                  <FaUser className="h-5 w-5 text-gray-400 mx-2" />
+                  <FaUserTag className="h-5 w-5 text-gray-400 mx-2" />
                   <input
                     type="text"
                     name="username"
@@ -152,7 +162,7 @@ const Register = () => {
                   Ulangi Password
                 </label>
                 <div className="flex items-center border rounded-md">
-                  <FaLock className="h-5 w-5 text-gray-400 mx-2" />
+                  <FaLockOpen className="h-5 w-5 text-gray-400 mx-2" />
                   <input
                     name="repeat_password"
                     type="password"
@@ -180,7 +190,7 @@ const Register = () => {
                   Kota Tempat Lahir
                 </label>
                 <div className="flex items-center border rounded-md">
-                  <FaMapPin className="h-5 w-5 text-gray-400 mx-2" />
+                  <FaHouseUser className="h-5 w-5 text-gray-400 mx-2" />
                   <input
                     name="place_of_birth"
                     type="text"
@@ -199,7 +209,7 @@ const Register = () => {
                   Tanggal Lahir
                 </label>
                 <div className="flex items-center border rounded-md">
-                  <FaMapPin className="h-5 w-5 text-gray-400 mx-2" />
+                  <FaCalendarDay className="h-5 w-5 text-gray-400 mx-2" />
                   <input
                     name="date_of_birth"
                     type="date"
@@ -258,7 +268,7 @@ const Register = () => {
                   Provinsi
                 </label>
                 <div className="flex items-center border rounded-md">
-                  <FaGlobe className="h-5 w-5 text-gray-400 mx-2" />
+                  <FaMap className="h-5 w-5 text-gray-400 mx-2" />
                   <input
                     name="province"
                     type="text"
@@ -271,7 +281,6 @@ const Register = () => {
               </div>
             </div>
             <div className="mb-4 md:grid md:grid-cols-2 gap-4">
-              {" "}
               <div className="">
                 <label
                   className="block text-gray-700 text-sm font-bold mb-2"
@@ -280,7 +289,7 @@ const Register = () => {
                   Kota
                 </label>
                 <div className="flex items-center border rounded-md">
-                  <FaMapPin className="h-5 w-5 text-gray-400 mx-2" />
+                  <FaCity className="h-5 w-5 text-gray-400 mx-2" />
                   <input
                     name="city"
                     type="text"
@@ -299,7 +308,7 @@ const Register = () => {
                   Kecamatan
                 </label>
                 <div className="flex items-center border rounded-md">
-                  <FaMapPin className="h-5 w-5 text-gray-400 mx-2" />
+                  <FaMapMarked className="h-5 w-5 text-gray-400 mx-2" />
                   <input
                     name="district"
                     type="text"
@@ -320,7 +329,7 @@ const Register = () => {
                   Kelurahan
                 </label>
                 <div className="flex items-center border rounded-md">
-                  <FaMapPin className="h-5 w-5 text-gray-400 mx-2" />
+                  <FaMapSigns className="h-5 w-5 text-gray-400 mx-2" />
                   <input
                     name="subdistrict"
                     type="text"
@@ -346,7 +355,7 @@ const Register = () => {
                   Kode Pos
                 </label>
                 <div className="flex items-center border rounded-md">
-                  <FaMapPin className="h-5 w-5 text-gray-400 mx-2" />
+                  <FaEnvelope className="h-5 w-5 text-gray-400 mx-2" />
                   <input
                     name="postal_code"
                     type="text"
