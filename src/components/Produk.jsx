@@ -10,7 +10,7 @@ const Produk = () => {
         <div className="bg-white p-6 rounded-lg shadow-md">
           <div className="bg-gray-200 h-32 flex items-center justify-center mb-4">
             <img
-              src="src/assets/1.jpg"
+              src="src/assets/waiting-place.jpg"
               alt="Pasien Menanti"
               className="object-cover h-full w-full"
             />
@@ -42,7 +42,7 @@ const Produk = () => {
         <div className="bg-white p-6 rounded-lg shadow-md">
           <div className="bg-gray-200 h-32 flex items-center justify-center mb-4">
             <img
-              src="src/assets/1.jpg"
+              src="src/assets/schedules-and-reminders.jpg"
               alt="Jadwal dan Pengingat"
               className="object-cover h-full w-full"
             />

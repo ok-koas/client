@@ -23,8 +23,18 @@ const Navbar = () => {
         </div>
         <div className="flex md:order-2 space-x-3 md:space-x-0 rtl:space-x-reverse">
           <Link to="/Register" onClick={handleLinkClick}>
-            <button className="text-white bg-red-700 hover:bg-red-800 focus:ring-4 focus:outline-none focus:ring-red-300 font-medium rounded-lg text-sm px-4 py-2 text-center dark:bg-red-600 dark:hover:bg-red-700 dark:focus:ring-red-800 hidden md:block">
-              Daftar
+            <button className="text-white bg-red-700 hover:bg-red-800 focus:ring-4 focus:outline-none focus:ring-red-300 font-medium rounded-lg text-sm px-4 py-2 text-center dark:bg-red-600 dark:hover:bg-red-700 dark:focus:ring-red-800 hidden md:flex items-center space-x-2">
+              <span>Daftar</span>
+              <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg" className="ml-2">
+                <g clipPath="url(#clip0_364_410)">
+                  <path d="M7.99992 10.6666L10.6666 7.99992M10.6666 7.99992L7.99992 5.33325M10.6666 7.99992H5.33325M14.6666 7.99992C14.6666 11.6818 11.6818 14.6666 7.99992 14.6666C4.31802 14.6666 1.33325 11.6818 1.33325 7.99992C1.33325 4.31802 4.31802 1.33325 7.99992 1.33325C11.6818 1.33325 14.6666 4.31802 14.6666 7.99992Z" stroke="#FEE9E7" strokeWidth="1.6" strokeLinecap="round" strokeLinejoin="round"/>
+                </g>
+                <defs>
+                  <clipPath id="clip0_364_410">
+                    <rect width="16" height="16" fill="white"/>
+                  </clipPath>
+                </defs>
+              </svg>
             </button>
           </Link>
           <button
