@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import { Link, useLocation } from "react-router-dom";
+import Logo from "./Logo";
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -15,12 +16,9 @@ const Navbar = () => {
   };
 
   return (
-    <nav className="bg-blue-50 fixed w-full z-20 top-0 start-0 border-b border-blue-200 shadow-md px-10">
+    <nav className="bg-blue-50 fixed w-full z-20 top-0 start-0 border-b border-blue-200 shadow-md md:px-10 backdrop-filter backdrop-blur-lg bg-opacity-30">
       <div className="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4">
-        <div className="text-2xl font-bold mb-4 md:mb-0">
-          <span className="text-black">OK</span>
-          <span className="text-blue-600">-Koas</span>
-        </div>
+        <Logo />
         <div className="flex md:order-2 space-x-3 md:space-x-0 rtl:space-x-reverse">
           <Link to="/Register" onClick={handleLinkClick}>
             <button className="text-white bg-red-700 hover:bg-red-800 focus:ring-4 focus:outline-none focus:ring-red-300 font-medium rounded-lg text-sm px-4 py-2 text-center dark:bg-red-600 dark:hover:bg-red-700 dark:focus:ring-red-800 hidden md:flex items-center space-x-2">
@@ -68,11 +66,11 @@ const Navbar = () => {
           } items-center justify-between w-full md:flex md:w-auto md:order-1`}
           id="navbar-sticky"
         >
-          <ul className="flex flex-col p-4 md:p-0 mt-4 font-medium border border-blue-100 rounded-lg bg-blue-50 md:space-x-8 rtl:space-x-reverse md:flex-row md:mt-0 md:border-0 md:bg-blue-50 dark:bg-blue-50 md:dark:bg-blue-50 dark:border-blue-700">
+          <ul className="flex flex-col p-4 md:p-0 mt-4 font-medium border border-blue-100 rounded-lg md:space-x-8 rtl:space-x-reverse md:flex-row md:mt-0 md:border-0 ">
             <li>
               <Link
                 to="/"
-                className={`block py-2 px-3 rounded md:bg-transparent md:p-0 ${
+                className={`block py-2 px-3 rounded md:bg-transparent md:p-0  ${
                   pathname === "/" ? "text-blue-700" : "text-black"
                 }`}
                 aria-current="page"
