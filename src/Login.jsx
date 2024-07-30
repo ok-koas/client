@@ -1,11 +1,10 @@
-require("react-dotenv").config();
 import React, { useState } from "react";
 import axios from "axios"; // Import Axios
 import { FaGoogle } from "react-icons/fa"; // Import logo Google dari react-icons
 import icon from "./assets/logo.png"; // Import gambar
 
 const Login = () => {
-  const SERVER_LINK = process.env.SERVER_LINK;
+  const SERVER_LINK = import.meta.env.VITE_SERVER_LINK;
   const [formData, setFormData] = useState({
     username: "",
     password: "",
@@ -41,7 +40,11 @@ const Login = () => {
       axios
         .post(SERVER_LINK, formData)
         .then((response) => {
-          console.log("Form submitted successfully:", response.data);
+          alert(response.data["username"]);
+          console.log(
+            "Form submitted successfully:",
+            response.data["username"]
+          );
         })
         .catch((error) => {
           console.error("There was an error submitting the form!", error);
