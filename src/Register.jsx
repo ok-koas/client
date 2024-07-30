@@ -22,7 +22,7 @@ const Register = () => {
 
   return (
     <>
-      <div className="container mx-auto px-4 py-20">
+      <div className="container mx-auto px-4 py-20 mt-10">
         <div className="bg-white shadow-md rounded-lg p-8 max-w-2xl mx-auto">
           <h2 className="text-3xl font-bold mb-6 text-center">
             Registrasi Pengguna
@@ -39,8 +39,9 @@ const Register = () => {
                 name="full_name"
                 type="text"
                 id="namaLengkap"
-                className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
-                placeholder="Nama Lengkap"
+                className="block px-3 w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"
+                placeholder="Contoh: Muhammad Subardjo"
+                required
               />
             </div>
             <div className="grid grid-cols-2 gap-5">
@@ -52,11 +53,12 @@ const Register = () => {
                   Username
                 </label>
                 <input
-                  name="username"
                   type="text"
+                  name="username"
                   id="username"
-                  className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
-                  placeholder="Username"
+                  class="block px-3 w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"
+                  placeholder="muhammad.subardjo"
+                  required
                 />
               </div>
               <div className="mb-4">
@@ -71,8 +73,9 @@ const Register = () => {
                   type="number"
                   id="nomorHandphone"
                   min={0}
-                  className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
-                  placeholder="Nomor Handphone"
+                  className="block px-3 w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"
+                  placeholder="6283812345678"
+                  required
                 />
               </div>
             </div>
@@ -84,11 +87,13 @@ const Register = () => {
                 Email (Opsional)
               </label>
               <input
+                id="email"
                 name="email"
                 type="email"
-                id="email"
-                className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
-                placeholder="Email"
+                autocomplete="email"
+                class="block px-3 w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"
+                placeholder="Contoh: ahmad.subardjo@gmail.com"
+                required
               />
             </div>
             <div className="mb-4 grid grid-cols-2 gap-5">
@@ -103,10 +108,11 @@ const Register = () => {
                   name="password"
                   type="password"
                   id="password"
-                  className={`shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline ${
+                  className={`block px-3 w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6 ${
                     errors.password ? "border-red-500" : ""
                   }`}
                   placeholder="Password"
+                  required
                 />
                 {errors.password && (
                   <p className="text-red-500 text-xs italic">
@@ -125,10 +131,11 @@ const Register = () => {
                   name="repeat_password"
                   type="password"
                   id="ulangiPassword"
-                  className={`shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline ${
+                  className={`block px-3 w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6 ${
                     errors.ulangiPassword ? "border-red-500" : ""
                   }`}
                   placeholder="Ulangi Password"
+                  required
                 />
                 {errors.ulangiPassword && (
                   <p className="text-red-500 text-xs italic">
@@ -149,8 +156,9 @@ const Register = () => {
                   name="place_of_birth"
                   type="text"
                   id="kotaTempatLahir"
-                  className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+                  className="block px-3 w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"
                   placeholder="Kota Tempat Lahir"
+                  required
                 />
               </div>
               <div>
@@ -164,7 +172,8 @@ const Register = () => {
                   name="date_of_birth"
                   type="date"
                   id="tanggalLahir"
-                  className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+                  className="block px-3 w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"
+                  required
                 />
               </div>
             </div>
@@ -182,9 +191,10 @@ const Register = () => {
                 name="address"
                 type="text"
                 id="alamat"
-                className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+                className="block px-3 w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"
                 placeholder="Contoh: Jalan Cempaka Raya No. 12, Rt.2/Rw.3"
                 rows={2}
+                required
               />
             </div>
             <div className="mb-4 grid grid-cols-2 gap-4">
@@ -199,8 +209,9 @@ const Register = () => {
                   name="country"
                   type="text"
                   id="negara"
-                  className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+                  className="block px-3 w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"
                   placeholder="Negara"
+                  required
                 />
               </div>
               <div>
@@ -214,8 +225,9 @@ const Register = () => {
                   name="province"
                   type="text"
                   id="provinsi"
-                  className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+                  className="block px-3 w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"
                   placeholder="Provinsi"
+                  required
                 />
               </div>
             </div>
@@ -231,8 +243,9 @@ const Register = () => {
                   name="city"
                   type="text"
                   id="kota"
-                  className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+                  className="block px-3 w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"
                   placeholder="Kota"
+                  required
                 />
               </div>
               <div>
@@ -246,8 +259,9 @@ const Register = () => {
                   name="district"
                   type="text"
                   id="kecamatan"
-                  className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+                  className="block px-3 w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"
                   placeholder="Kecamatan"
+                  required
                 />
               </div>
             </div>
@@ -263,10 +277,11 @@ const Register = () => {
                   name="subdistrict"
                   type="text"
                   id="kelurahan"
-                  className={`shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline ${
+                  className={`block px-3 w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6 ${
                     errors.kelurahan ? "border-red-500" : ""
                   }`}
                   placeholder="Kelurahan"
+                  required
                 />
                 {errors.kelurahan && (
                   <p className="text-red-500 text-xs italic">
@@ -285,10 +300,11 @@ const Register = () => {
                   name="postal_code"
                   type="text"
                   id="kodePos"
-                  className={`shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline ${
+                  className={`block px-3 w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6 ${
                     errors.kodePos ? "border-red-500" : ""
                   }`}
                   placeholder="Kode Pos"
+                  required
                 />
                 {errors.kodePos && (
                   <p className="text-red-500 text-xs italic">
@@ -303,7 +319,8 @@ const Register = () => {
                   className="block text-gray-700 text-sm font-bold mb-2"
                   htmlFor="riwayatKesehatan"
                 >
-                  Riwayat Kesehatan
+                  Riwayat Kesehatan{" "}
+                  <span className="text-gray-500">(Opsional)</span>
                 </label>
                 <textarea
                   name="medical_history"
@@ -326,7 +343,7 @@ const Register = () => {
                     name="insurance_name"
                     type="text"
                     id="Asuransi"
-                    className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+                    className="block px-3 w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"
                     placeholder="Asuransi"
                   />
                 </div>
