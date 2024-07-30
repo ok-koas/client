@@ -1,5 +1,13 @@
 import React, { useState } from "react";
-import { FaUserPlus, FaUser, FaPhone, FaEnvelope, FaLock, FaGlobe, FaMapPin } from 'react-icons/fa';
+import {
+  FaUserPlus,
+  FaUser,
+  FaPhone,
+  FaEnvelope,
+  FaLock,
+  FaGlobe,
+  FaMapPin,
+} from "react-icons/fa";
 import Navbar from "./components/Navbar";
 import Footer from "./components/Footer";
 
@@ -164,26 +172,42 @@ const Register = () => {
               </div>
             </div>
             <div className="mb-4 grid grid-cols-2 gap-4">
-              <div className="flex items-center border rounded-md">
-                <FaMapPin className="h-5 w-5 text-gray-400 ml-2" />
-                <input
-                  name="place_of_birth"
-                  type="text"
-                  id="kotaTempatLahir"
-                  className="block px-3 w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-0 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"
-                  placeholder="Kota Tempat Lahir"
-                  required
-                />
+              <div className="">
+                <label
+                  className="block text-gray-700 text-sm font-bold mb-2"
+                  htmlFor="kotaTempatLahir"
+                >
+                  Kota Tempat Lahir
+                </label>
+                <div className="flex items-center border rounded-md">
+                  <FaMapPin className="h-5 w-5 text-gray-400 ml-2" />
+                  <input
+                    name="place_of_birth"
+                    type="text"
+                    id="kotaTempatLahir"
+                    className="block px-3 w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-0 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"
+                    placeholder="Kota Tempat Lahir"
+                    required
+                  />
+                </div>
               </div>
-              <div className="flex items-center border rounded-md">
-                <FaMapPin className="h-5 w-5 text-gray-400 ml-2" />
-                <input
-                  name="date_of_birth"
-                  type="date"
-                  id="tanggalLahir"
-                  className="block px-3 w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-0 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"
-                  required
-                />
+              <div className="">
+                <label
+                  className="block text-gray-700 text-sm font-bold mb-2"
+                  htmlFor="tanggalLahir"
+                >
+                  Tanggal Lahir
+                </label>
+                <div className="flex items-center border rounded-md">
+                  <FaMapPin className="h-5 w-5 text-gray-400 ml-2" />
+                  <input
+                    name="date_of_birth"
+                    type="date"
+                    id="tanggalLahir"
+                    className="block px-3 w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-0 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"
+                    required
+                  />
+                </div>
               </div>
             </div>
             <div className="mb-4">
@@ -207,89 +231,138 @@ const Register = () => {
               />
             </div>
             <div className="mb-4 grid grid-cols-2 gap-4">
-              <div className="flex items-center border rounded-md">
-                <FaGlobe className="h-5 w-5 text-gray-400 ml-2" />
-                <input
-                  name="country"
-                  type="text"
-                  id="negara"
-                  className="block px-3 w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-0 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"
-                  placeholder="Negara"
-                  required
-                />
+              <div className="">
+                <label
+                  className="block text-gray-700 text-sm font-bold mb-2"
+                  htmlFor="negara"
+                >
+                  Negara
+                </label>
+                <div className="flex items-center border rounded-md">
+                  <FaGlobe className="h-5 w-5 text-gray-400 ml-2" />
+                  <input
+                    name="country"
+                    type="text"
+                    id="negara"
+                    className="block px-3 w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-0 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"
+                    placeholder="Negara"
+                    required
+                  />
+                </div>
               </div>
-              <div className="flex items-center border rounded-md">
-                <FaGlobe className="h-5 w-5 text-gray-400 ml-2" />
-                <input
-                  name="province"
-                  type="text"
-                  id="provinsi"
-                  className="block px-3 w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-0 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"
-                  placeholder="Provinsi"
-                  required
-                />
-              </div>
-            </div>
-            <div className="mb-4 grid grid-cols-2 gap-4">
-              <div className="flex items-center border rounded-md">
-                <FaMapPin className="h-5 w-5 text-gray-400 ml-2" />
-                <input
-                  name="city"
-                  type="text"
-                  id="kota"
-                  className="block px-3 w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-0 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"
-                  placeholder="Kota"
-                  required
-                />
-              </div>
-              <div className="flex items-center border rounded-md">
-                <FaMapPin className="h-5 w-5 text-gray-400 ml-2" />
-                <input
-                  name="district"
-                  type="text"
-                  id="kecamatan"
-                  className="block px-3 w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-0 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"
-                  placeholder="Kecamatan"
-                  required
-                />
+              <div className="">
+                <label
+                  className="block text-gray-700 text-sm font-bold mb-2"
+                  htmlFor="province"
+                >
+                  Provinsi
+                </label>
+                <div className="flex items-center border rounded-md">
+                  <FaGlobe className="h-5 w-5 text-gray-400 ml-2" />
+                  <input
+                    name="province"
+                    type="text"
+                    id="provinsi"
+                    className="block px-3 w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-0 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"
+                    placeholder="Provinsi"
+                    required
+                  />
+                </div>
               </div>
             </div>
             <div className="mb-4 grid grid-cols-2 gap-4">
-              <div className="flex items-center border rounded-md">
-                <FaMapPin className="h-5 w-5 text-gray-400 ml-2" />
-                <input
-                  name="subdistrict"
-                  type="text"
-                  id="kelurahan"
-                  className={`block px-3 w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-0 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6 ${
-                    errors.kelurahan ? "border-red-500" : ""
-                  }`}
-                  placeholder="Kelurahan"
-                  required
-                />
-                {errors.kelurahan && (
-                  <p className="text-red-500 text-xs italic">
-                    {errors.kelurahan}
-                  </p>
-                )}
+              {" "}
+              <div className="">
+                <label
+                  className="block text-gray-700 text-sm font-bold mb-2"
+                  htmlFor="kota"
+                >
+                  Kota
+                </label>
+                <div className="flex items-center border rounded-md">
+                  <FaMapPin className="h-5 w-5 text-gray-400 ml-2" />
+                  <input
+                    name="city"
+                    type="text"
+                    id="kota"
+                    className="block px-3 w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-0 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"
+                    placeholder="Kota"
+                    required
+                  />
+                </div>
+              </div>{" "}
+              <div className="">
+                <label
+                  className="block text-gray-700 text-sm font-bold mb-2"
+                  htmlFor="kecamatan"
+                >
+                  Kecamatan
+                </label>
+                <div className="flex items-center border rounded-md">
+                  <FaMapPin className="h-5 w-5 text-gray-400 ml-2" />
+                  <input
+                    name="district"
+                    type="text"
+                    id="kecamatan"
+                    className="block px-3 w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-0 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"
+                    placeholder="Kecamatan"
+                    required
+                  />
+                </div>
               </div>
-              <div className="flex items-center border rounded-md">
-                <FaMapPin className="h-5 w-5 text-gray-400 ml-2" />
-                <input
-                  name="postal_code"
-                  type="text"
-                  id="kodePos"
-                  className={`block px-3 w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-0 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6 ${
-                    errors.kodePos ? "border-red-500" : ""
-                  }`}
-                  placeholder="Kode Pos"
-                  required
-                />
-                {errors.kodePos && (
-                  <p className="text-red-500 text-xs italic">
-                    {errors.kodePos}
-                  </p>
-                )}
+            </div>{" "}
+            <div className="mb-4 grid grid-cols-2 gap-4">
+              <div className="">
+                <label
+                  className="block text-gray-700 text-sm font-bold mb-2"
+                  htmlFor="kelurahan"
+                >
+                  Kelurahan
+                </label>
+                <div className="flex items-center border rounded-md">
+                  <FaMapPin className="h-5 w-5 text-gray-400 ml-2" />
+                  <input
+                    name="subdistrict"
+                    type="text"
+                    id="kelurahan"
+                    className={`block px-3 w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-0 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6 ${
+                      errors.kelurahan ? "border-red-500" : ""
+                    }`}
+                    placeholder="Kelurahan"
+                    required
+                  />
+                  {errors.kelurahan && (
+                    <p className="text-red-500 text-xs italic">
+                      {errors.kelurahan}
+                    </p>
+                  )}
+                </div>
+              </div>{" "}
+              <div className="">
+                <label
+                  className="block text-gray-700 text-sm font-bold mb-2"
+                  htmlFor="kodePos"
+                >
+                  Kode Pos
+                </label>
+                <div className="flex items-center border rounded-md">
+                  <FaMapPin className="h-5 w-5 text-gray-400 ml-2" />
+                  <input
+                    name="postal_code"
+                    type="text"
+                    id="kodePos"
+                    className={`block px-3 w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-0 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6 ${
+                      errors.kodePos ? "border-red-500" : ""
+                    }`}
+                    placeholder="Kode Pos"
+                    required
+                  />
+                  {errors.kodePos && (
+                    <p className="text-red-500 text-xs italic">
+                      {errors.kodePos}
+                    </p>
+                  )}
+                </div>
               </div>
             </div>
             <div className="mb-4 grid grid-cols-2 gap-5">
