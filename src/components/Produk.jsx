@@ -7,8 +7,8 @@ const Produk = () => {
         Layanan <span className="text-blue-600">Kami</span>
       </h1>
       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
-        <div className="bg-white p-6 rounded-lg shadow-md">
-          <div className="bg-gray-200 h-32 flex items-center justify-center mb-4">
+        <a href="/link1" className="block bg-white p-6 rounded-lg shadow-md hover:opacity-80">
+          <div className="bg-gray-200 h-40 flex items-center justify-center mb-4">
             <img
               src="src/assets/waiting-place.jpg"
               alt="Pasien Menanti"
@@ -22,11 +22,11 @@ const Produk = () => {
             Pendaftaran pasien dan pencocokan otomatis dengan koas berdasarkan
             spesialisasi dan ketersediaan. Notifikasi real-time untuk koas.
           </p>
-        </div>
-        <div className="bg-white p-6 rounded-lg shadow-md">
-          <div className="bg-gray-200 h-32 flex items-center justify-center mb-4">
+        </a>
+        <a href="/link2" className="block bg-white p-6 rounded-lg shadow-md hover:opacity-80">
+          <div className="bg-gray-200 h-40 flex items-center justify-center mb-4">
             <img
-              src="src/assets/1.jpg"
+              src="src/assets/step.png"
               alt="Step by Step"
               className="object-cover h-full w-full"
             />
@@ -38,9 +38,9 @@ const Produk = () => {
             Panduan terstruktur dari konsultasi pertama hingga kontrol
             berikutnya. Pengingat otomatis dan sistem poin untuk pasien.
           </p>
-        </div>
-        <div className="bg-white p-6 rounded-lg shadow-md">
-          <div className="bg-gray-200 h-32 flex items-center justify-center mb-4">
+        </a>
+        <a href="/link3" className="block bg-white p-6 rounded-lg shadow-md hover:opacity-80">
+          <div className="bg-gray-200 h-40 flex items-center justify-center mb-4">
             <img
               src="src/assets/schedules-and-reminders.jpg"
               alt="Jadwal dan Pengingat"
@@ -54,11 +54,11 @@ const Produk = () => {
             Kalender rotasi, pengingat tugas dan ujian, serta integrasi dengan
             kalender pribadi.
           </p>
-        </div>
-        <div className="bg-white p-6 rounded-lg shadow-md">
-          <div className="bg-gray-200 h-32 flex items-center justify-center mb-4">
+        </a>
+        <a href="/link4" className="block bg-white p-6 rounded-lg shadow-md hover:opacity-80">
+          <div className="bg-gray-200 h-40 flex items-center justify-center mb-4">
             <img
-              src="src/assets/1.jpg"
+              src="src/assets/management.jpg"
               alt="Manajemen Pasien"
               className="object-cover h-full w-full"
             />
@@ -70,11 +70,11 @@ const Produk = () => {
             Catatan medis elektronik lengkap, riwayat medis, hasil laboratorium,
             upload radiologi, dan telemedicine.
           </p>
-        </div>
-        <div className="bg-white p-6 rounded-lg shadow-md">
-          <div className="bg-gray-200 h-32 flex items-center justify-center mb-4">
+        </a>
+        <a href="/link5" className="block bg-white p-6 rounded-lg shadow-md hover:opacity-80">
+          <div className="bg-gray-200 h-40 flex items-center justify-center mb-4">
             <img
-              src="src/assets/1.jpg"
+              src="src/assets/Medis.jpeg"
               alt="Pustaka Medis"
               className="object-cover h-full w-full"
             />
@@ -86,11 +86,11 @@ const Produk = () => {
             Akses cepat ke referensi medis, panduan klinis, jurnal, kasus-kasus
             umum, serta kuis dan soal latihan.
           </p>
-        </div>
-        <div className="bg-white p-6 rounded-lg shadow-md">
-          <div className="bg-gray-200 h-32 flex items-center justify-center mb-4">
+        </a>
+        <a href="/link6" className="block bg-white p-6 rounded-lg shadow-md hover:opacity-80">
+          <div className="bg-gray-200 h-40 flex items-center justify-center mb-4">
             <img
-              src="src/assets/1.jpg"
+              src="src/assets/interaksi.webp"
               alt="Interaksi dan Kolaborasi"
               className="object-cover h-full w-full"
             />
@@ -102,7 +102,7 @@ const Produk = () => {
             Forum diskusi dan chat, konsultasi dengan senior atau dosen, serta
             evaluasi diri dan feedback dari supervisor.
           </p>
-        </div>
+        </a>
       </div>
     </div>
   );
