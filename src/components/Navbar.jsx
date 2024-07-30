@@ -111,7 +111,7 @@ const Navbar = () => {
                 }`}
                 onClick={handleLinkClick}
               >
-                Daftar
+                Masuk
               </Link>
             </li>
           </ul>
