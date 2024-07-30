@@ -23,7 +23,7 @@ const Navbar = () => {
         </div>
         <div className="flex md:order-2 space-x-3 md:space-x-0 rtl:space-x-reverse">
           <Link to="/Register" onClick={handleLinkClick}>
-            <button className="text-white bg-red-700 hover:bg-red-800 focus:ring-4 focus:outline-none focus:ring-red-300 font-medium rounded-lg text-sm px-4 py-2 text-center dark:bg-red-600 dark:hover:bg-red-700 dark:focus:ring-red-800">
+            <button className="text-white bg-red-700 hover:bg-red-800 focus:ring-4 focus:outline-none focus:ring-red-300 font-medium rounded-lg text-sm px-4 py-2 text-center dark:bg-red-600 dark:hover:bg-red-700 dark:focus:ring-red-800 hidden md:block">
               Daftar
             </button>
           </Link>
@@ -80,6 +80,17 @@ const Navbar = () => {
                 onClick={handleLinkClick}
               >
                 Tentang Kami
+              </Link>
+            </li>
+            <li>
+              <Link
+                to={"/register"}
+                className={`md:hidden py-2 px-3 rounded md:bg-transparent md:p-0 ${
+                  pathname === "/register" ? "text-blue-700" : "text-red-600"
+                }`}
+                onClick={handleLinkClick}
+              >
+                Daftar
               </Link>
             </li>
           </ul>
