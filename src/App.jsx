@@ -9,7 +9,7 @@ import Hooker2 from "./components/Hooker2";
 import Footer from "./components/Footer";
 import TentangKami from "./TentangKami";
 import Register from "./Register";
-import Login from "./Login";  // Import Login component
+import Login from "./Login"; // Import Login component
 import ErrorPage from "./error-page";
 import Error404 from "./Error404";
 import Error500 from "./Error500";
@@ -81,7 +81,7 @@ const router = createBrowserRouter([
     path: "/login",
     element: (
       <div>
-        <Login />  {/* Add Login component here */}
+        <Login /> {/* Add Login component here */}
       </div>
     ),
     errorElement: <ErrorPage />,
