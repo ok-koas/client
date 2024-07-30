@@ -19,7 +19,7 @@ const router = createBrowserRouter([
     element: (
       <div>
         <Navbar />
-        <main className="px-4 md:px-8 lg:px-16">
+        <main className="mt-5 md:px-8 lg:px-16">
           <HeroSection />
           <AlasanSection />
           <Produk />
