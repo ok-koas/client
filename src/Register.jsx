@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { FaUserPlus, FaUser, FaPhone, FaEnvelope, FaLock, FaGlobe, FaMapPin } from 'react-icons/fa';
 import Navbar from "./components/Navbar";
 import Footer from "./components/Footer";
 
@@ -35,14 +36,17 @@ const Register = () => {
               >
                 Nama Lengkap
               </label>
-              <input
-                name="full_name"
-                type="text"
-                id="namaLengkap"
-                className="block px-3 w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"
-                placeholder="Contoh: Muhammad Subardjo"
-                required
-              />
+              <div className="flex items-center border rounded-md">
+                <FaUser className="h-5 w-5 text-gray-400 ml-2" />
+                <input
+                  name="full_name"
+                  type="text"
+                  id="namaLengkap"
+                  className="block px-3 w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-0 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"
+                  placeholder="Contoh: Muhammad Subardjo"
+                  required
+                />
+              </div>
             </div>
             <div className="grid grid-cols-2 gap-5">
               <div className="mb-4">
@@ -52,14 +56,17 @@ const Register = () => {
                 >
                   Username
                 </label>
-                <input
-                  type="text"
-                  name="username"
-                  id="username"
-                  class="block px-3 w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"
-                  placeholder="muhammad.subardjo"
-                  required
-                />
+                <div className="flex items-center border rounded-md">
+                  <FaUser className="h-5 w-5 text-gray-400 ml-2" />
+                  <input
+                    type="text"
+                    name="username"
+                    id="username"
+                    className="block px-3 w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-0 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"
+                    placeholder="subardjo"
+                    required
+                  />
+                </div>
               </div>
               <div className="mb-4">
                 <label
@@ -68,15 +75,18 @@ const Register = () => {
                 >
                   Nomor Handphone
                 </label>
-                <input
-                  name="phone_number"
-                  type="number"
-                  id="nomorHandphone"
-                  min={0}
-                  className="block px-3 w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"
-                  placeholder="6283812345678"
-                  required
-                />
+                <div className="flex items-center border rounded-md">
+                  <FaPhone className="h-5 w-5 text-gray-400 ml-2" />
+                  <input
+                    name="phone_number"
+                    type="number"
+                    id="nomorHandphone"
+                    min={0}
+                    className="block px-3 w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-0 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"
+                    placeholder="6283812345678"
+                    required
+                  />
+                </div>
               </div>
             </div>
             <div className="mb-4">
@@ -86,15 +96,18 @@ const Register = () => {
               >
                 Email (Opsional)
               </label>
-              <input
-                id="email"
-                name="email"
-                type="email"
-                autocomplete="email"
-                class="block px-3 w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"
-                placeholder="Contoh: ahmad.subardjo@gmail.com"
-                required
-              />
+              <div className="flex items-center border rounded-md">
+                <FaEnvelope className="h-5 w-5 text-gray-400 ml-2" />
+                <input
+                  id="email"
+                  name="email"
+                  type="email"
+                  autoComplete="email"
+                  className="block px-3 w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-0 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"
+                  placeholder="Contoh: ahmad.subardjo@gmail.com"
+                  required
+                />
+              </div>
             </div>
             <div className="mb-4 grid grid-cols-2 gap-5">
               <div>
@@ -104,21 +117,24 @@ const Register = () => {
                 >
                   Password
                 </label>
-                <input
-                  name="password"
-                  type="password"
-                  id="password"
-                  className={`block px-3 w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6 ${
-                    errors.password ? "border-red-500" : ""
-                  }`}
-                  placeholder="Password"
-                  required
-                />
-                {errors.password && (
-                  <p className="text-red-500 text-xs italic">
-                    {errors.password}
-                  </p>
-                )}
+                <div className="flex items-center border rounded-md">
+                  <FaLock className="h-5 w-5 text-gray-400 ml-2" />
+                  <input
+                    name="password"
+                    type="password"
+                    id="password"
+                    className={`block px-3 w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-0 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6 ${
+                      errors.password ? "border-red-500" : ""
+                    }`}
+                    placeholder="Password"
+                    required
+                  />
+                  {errors.password && (
+                    <p className="text-red-500 text-xs italic">
+                      {errors.password}
+                    </p>
+                  )}
+                </div>
               </div>
               <div>
                 <label
@@ -127,52 +143,45 @@ const Register = () => {
                 >
                   Ulangi Password
                 </label>
-                <input
-                  name="repeat_password"
-                  type="password"
-                  id="ulangiPassword"
-                  className={`block px-3 w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6 ${
-                    errors.ulangiPassword ? "border-red-500" : ""
-                  }`}
-                  placeholder="Ulangi Password"
-                  required
-                />
-                {errors.ulangiPassword && (
-                  <p className="text-red-500 text-xs italic">
-                    {errors.ulangiPassword}
-                  </p>
-                )}
+                <div className="flex items-center border rounded-md">
+                  <FaLock className="h-5 w-5 text-gray-400 ml-2" />
+                  <input
+                    name="repeat_password"
+                    type="password"
+                    id="ulangiPassword"
+                    className={`block px-3 w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-0 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6 ${
+                      errors.ulangiPassword ? "border-red-500" : ""
+                    }`}
+                    placeholder="Ulangi Password"
+                    required
+                  />
+                  {errors.ulangiPassword && (
+                    <p className="text-red-500 text-xs italic">
+                      {errors.ulangiPassword}
+                    </p>
+                  )}
+                </div>
               </div>
             </div>
             <div className="mb-4 grid grid-cols-2 gap-4">
-              <div>
-                <label
-                  className="block text-gray-700 text-sm font-bold mb-2"
-                  htmlFor="kotaTempatLahir"
-                >
-                  Kota Tempat Lahir
-                </label>
+              <div className="flex items-center border rounded-md">
+                <FaMapPin className="h-5 w-5 text-gray-400 ml-2" />
                 <input
                   name="place_of_birth"
                   type="text"
                   id="kotaTempatLahir"
-                  className="block px-3 w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"
+                  className="block px-3 w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-0 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"
                   placeholder="Kota Tempat Lahir"
                   required
                 />
               </div>
-              <div>
-                <label
-                  className="block text-gray-700 text-sm font-bold mb-2"
-                  htmlFor="tanggalLahir"
-                >
-                  Tanggal Lahir
-                </label>
+              <div className="flex items-center border rounded-md">
+                <FaMapPin className="h-5 w-5 text-gray-400 ml-2" />
                 <input
                   name="date_of_birth"
                   type="date"
                   id="tanggalLahir"
-                  className="block px-3 w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"
+                  className="block px-3 w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-0 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"
                   required
                 />
               </div>
@@ -198,86 +207,61 @@ const Register = () => {
               />
             </div>
             <div className="mb-4 grid grid-cols-2 gap-4">
-              <div>
-                <label
-                  className="block text-gray-700 text-sm font-bold mb-2"
-                  htmlFor="negara"
-                >
-                  Negara
-                </label>
+              <div className="flex items-center border rounded-md">
+                <FaGlobe className="h-5 w-5 text-gray-400 ml-2" />
                 <input
                   name="country"
                   type="text"
                   id="negara"
-                  className="block px-3 w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"
+                  className="block px-3 w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-0 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"
                   placeholder="Negara"
                   required
                 />
               </div>
-              <div>
-                <label
-                  className="block text-gray-700 text-sm font-bold mb-2"
-                  htmlFor="provinsi"
-                >
-                  Provinsi
-                </label>
+              <div className="flex items-center border rounded-md">
+                <FaGlobe className="h-5 w-5 text-gray-400 ml-2" />
                 <input
                   name="province"
                   type="text"
                   id="provinsi"
-                  className="block px-3 w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"
+                  className="block px-3 w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-0 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"
                   placeholder="Provinsi"
                   required
                 />
               </div>
             </div>
             <div className="mb-4 grid grid-cols-2 gap-4">
-              <div>
-                <label
-                  className="block text-gray-700 text-sm font-bold mb-2"
-                  htmlFor="kota"
-                >
-                  Kota
-                </label>
+              <div className="flex items-center border rounded-md">
+                <FaMapPin className="h-5 w-5 text-gray-400 ml-2" />
                 <input
                   name="city"
                   type="text"
                   id="kota"
-                  className="block px-3 w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"
+                  className="block px-3 w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-0 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"
                   placeholder="Kota"
                   required
                 />
               </div>
-              <div>
-                <label
-                  className="block text-gray-700 text-sm font-bold mb-2"
-                  htmlFor="kecamatan"
-                >
-                  Kecamatan
-                </label>
+              <div className="flex items-center border rounded-md">
+                <FaMapPin className="h-5 w-5 text-gray-400 ml-2" />
                 <input
                   name="district"
                   type="text"
                   id="kecamatan"
-                  className="block px-3 w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"
+                  className="block px-3 w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-0 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"
                   placeholder="Kecamatan"
                   required
                 />
               </div>
             </div>
             <div className="mb-4 grid grid-cols-2 gap-4">
-              <div>
-                <label
-                  className="block text-gray-700 text-sm font-bold mb-2"
-                  htmlFor="kelurahan"
-                >
-                  Kelurahan
-                </label>
+              <div className="flex items-center border rounded-md">
+                <FaMapPin className="h-5 w-5 text-gray-400 ml-2" />
                 <input
                   name="subdistrict"
                   type="text"
                   id="kelurahan"
-                  className={`block px-3 w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6 ${
+                  className={`block px-3 w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-0 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6 ${
                     errors.kelurahan ? "border-red-500" : ""
                   }`}
                   placeholder="Kelurahan"
@@ -289,18 +273,13 @@ const Register = () => {
                   </p>
                 )}
               </div>
-              <div>
-                <label
-                  className="block text-gray-700 text-sm font-bold mb-2"
-                  htmlFor="kodePos"
-                >
-                  Kode Pos
-                </label>
+              <div className="flex items-center border rounded-md">
+                <FaMapPin className="h-5 w-5 text-gray-400 ml-2" />
                 <input
                   name="postal_code"
                   type="text"
                   id="kodePos"
-                  className={`block px-3 w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6 ${
+                  className={`block px-3 w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-0 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6 ${
                     errors.kodePos ? "border-red-500" : ""
                   }`}
                   placeholder="Kode Pos"
@@ -326,7 +305,7 @@ const Register = () => {
                   name="medical_history"
                   type="text"
                   id="riwayatKesehatan"
-                  className="shadow appearance-none border-r-2  rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+                  className="shadow appearance-none border-r-2 rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
                   placeholder="Riwayat Kesehatan"
                   rows={6}
                 />
@@ -367,11 +346,12 @@ const Register = () => {
                 </div>
               </div>
             </div>
-            <div className="text-center">
+            <div className="flex justify-center mb-4">
               <button
                 type="submit"
-                className="bg-red-500 hover:bg-red-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline"
+                className="bg-red-500 hover:bg-red-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline flex items-center justify-center"
               >
+                <FaUserPlus className="h-5 w-5 mr-2" />
                 Daftar Sekarang
               </button>
             </div>

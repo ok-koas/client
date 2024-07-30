@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { FaGoogle } from "react-icons/fa"; // Import logo Google dari react-icons
+import { FaGoogle, FaUser, FaLock, FaSignInAlt } from "react-icons/fa"; // Import ikon dari react-icons
 import icon from './assets/logo.png'; // Import gambar
 
 const Login = () => {
@@ -35,16 +35,19 @@ const Login = () => {
               >
                 Username
               </label>
-              <input
-                type="text"
-                name="username"
-                id="username"
-                className={`block px-3 w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6 ${
-                  errors.username ? "border-red-500" : ""
-                }`}
-                placeholder="muhammad.subardjo"
-                required
-              />
+              <div className="flex items-center border rounded-md">
+                <FaUser className="text-gray-500 mx-3" />
+                <input
+                  type="text"
+                  name="username"
+                  id="username"
+                  className={`flex-1 px-3 py-1.5 text-gray-900 border-0 focus:ring-2 focus:ring-indigo-600 ${
+                    errors.username ? "border-red-500" : ""
+                  }`}
+                  placeholder="muhammad.subardjo"
+                  required
+                />
+              </div>
               {errors.username && (
                 <p className="text-red-500 text-xs italic">{errors.username}</p>
               )}
@@ -56,16 +59,19 @@ const Login = () => {
               >
                 Password
               </label>
-              <input
-                name="password"
-                type="password"
-                id="password"
-                className={`block px-3 w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6 ${
-                  errors.password ? "border-red-500" : ""
-                }`}
-                placeholder="Password"
-                required
-              />
+              <div className="flex items-center border rounded-md">
+                <FaLock className="text-gray-500 mx-3" />
+                <input
+                  name="password"
+                  type="password"
+                  id="password"
+                  className={`flex-1 px-3 py-1.5 text-gray-900 border-0 focus:ring-2 focus:ring-indigo-600 ${
+                    errors.password ? "border-red-500" : ""
+                  }`}
+                  placeholder="Password"
+                  required
+                />
+              </div>
               {errors.password && (
                 <p className="text-red-500 text-xs italic">{errors.password}</p>
               )}
@@ -75,6 +81,7 @@ const Login = () => {
                 type="submit"
                 className="flex items-center justify-center gap-2 bg-red-500 hover:bg-red-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline w-full"
               >
+                <FaSignInAlt className="text-lg" />
                 Login
               </button>
             </div>
