@@ -45,7 +45,7 @@ const Register = () => {
                 Nama Lengkap
               </label>
               <div className="flex items-center border rounded-md">
-                <FaUser className="h-5 w-5 text-gray-400 ml-2" />
+                <FaUser className="h-5 w-5 text-gray-400 mx-2" />
                 <input
                   name="full_name"
                   type="text"
@@ -56,7 +56,7 @@ const Register = () => {
                 />
               </div>
             </div>
-            <div className="grid grid-cols-2 gap-5">
+            <div className="md:grid md:grid-cols-2 gap-5">
               <div className="mb-4">
                 <label
                   className="block text-gray-700 text-sm font-bold mb-2"
@@ -65,7 +65,7 @@ const Register = () => {
                   Username
                 </label>
                 <div className="flex items-center border rounded-md">
-                  <FaUser className="h-5 w-5 text-gray-400 ml-2" />
+                  <FaUser className="h-5 w-5 text-gray-400 mx-2" />
                   <input
                     type="text"
                     name="username"
@@ -84,7 +84,7 @@ const Register = () => {
                   Nomor Handphone
                 </label>
                 <div className="flex items-center border rounded-md">
-                  <FaPhone className="h-5 w-5 text-gray-400 ml-2" />
+                  <FaPhone className="h-5 w-5 text-gray-400 mx-2" />
                   <input
                     name="phone_number"
                     type="number"
@@ -105,7 +105,7 @@ const Register = () => {
                 Email (Opsional)
               </label>
               <div className="flex items-center border rounded-md">
-                <FaEnvelope className="h-5 w-5 text-gray-400 ml-2" />
+                <FaEnvelope className="h-5 w-5 text-gray-400 mx-2" />
                 <input
                   id="email"
                   name="email"
@@ -117,7 +117,7 @@ const Register = () => {
                 />
               </div>
             </div>
-            <div className="mb-4 grid grid-cols-2 gap-5">
+            <div className="mb-4 md:grid md:grid-cols-2 gap-5">
               <div>
                 <label
                   className="block text-gray-700 text-sm font-bold mb-2"
@@ -126,7 +126,7 @@ const Register = () => {
                   Password
                 </label>
                 <div className="flex items-center border rounded-md">
-                  <FaLock className="h-5 w-5 text-gray-400 ml-2" />
+                  <FaLock className="h-5 w-5 text-gray-400 mx-2" />
                   <input
                     name="password"
                     type="password"
@@ -146,13 +146,13 @@ const Register = () => {
               </div>
               <div>
                 <label
-                  className="block text-gray-700 text-sm font-bold mb-2"
+                  className="block text-gray-700 text-sm font-bold my-2"
                   htmlFor="ulangiPassword"
                 >
                   Ulangi Password
                 </label>
                 <div className="flex items-center border rounded-md">
-                  <FaLock className="h-5 w-5 text-gray-400 ml-2" />
+                  <FaLock className="h-5 w-5 text-gray-400 mx-2" />
                   <input
                     name="repeat_password"
                     type="password"
@@ -171,7 +171,7 @@ const Register = () => {
                 </div>
               </div>
             </div>
-            <div className="mb-4 grid grid-cols-2 gap-4">
+            <div className="mb-4 md:grid md:grid-cols-2 gap-4">
               <div className="">
                 <label
                   className="block text-gray-700 text-sm font-bold mb-2"
@@ -180,7 +180,7 @@ const Register = () => {
                   Kota Tempat Lahir
                 </label>
                 <div className="flex items-center border rounded-md">
-                  <FaMapPin className="h-5 w-5 text-gray-400 ml-2" />
+                  <FaMapPin className="h-5 w-5 text-gray-400 mx-2" />
                   <input
                     name="place_of_birth"
                     type="text"
@@ -193,13 +193,13 @@ const Register = () => {
               </div>
               <div className="">
                 <label
-                  className="block text-gray-700 text-sm font-bold mb-2"
+                  className="block text-gray-700 text-sm font-bold my-2"
                   htmlFor="tanggalLahir"
                 >
                   Tanggal Lahir
                 </label>
                 <div className="flex items-center border rounded-md">
-                  <FaMapPin className="h-5 w-5 text-gray-400 ml-2" />
+                  <FaMapPin className="h-5 w-5 text-gray-400 mx-2" />
                   <input
                     name="date_of_birth"
                     type="date"
@@ -230,7 +230,7 @@ const Register = () => {
                 required
               />
             </div>
-            <div className="mb-4 grid grid-cols-2 gap-4">
+            <div className="mb-4 md:grid md:grid-cols-2 gap-4">
               <div className="">
                 <label
                   className="block text-gray-700 text-sm font-bold mb-2"
@@ -239,7 +239,7 @@ const Register = () => {
                   Negara
                 </label>
                 <div className="flex items-center border rounded-md">
-                  <FaGlobe className="h-5 w-5 text-gray-400 ml-2" />
+                  <FaGlobe className="h-5 w-5 text-gray-400 mx-2" />
                   <input
                     name="country"
                     type="text"
@@ -252,13 +252,13 @@ const Register = () => {
               </div>
               <div className="">
                 <label
-                  className="block text-gray-700 text-sm font-bold mb-2"
+                  className="block text-gray-700 text-sm font-bold my-2"
                   htmlFor="province"
                 >
                   Provinsi
                 </label>
                 <div className="flex items-center border rounded-md">
-                  <FaGlobe className="h-5 w-5 text-gray-400 ml-2" />
+                  <FaGlobe className="h-5 w-5 text-gray-400 mx-2" />
                   <input
                     name="province"
                     type="text"
@@ -270,7 +270,7 @@ const Register = () => {
                 </div>
               </div>
             </div>
-            <div className="mb-4 grid grid-cols-2 gap-4">
+            <div className="mb-4 md:grid md:grid-cols-2 gap-4">
               {" "}
               <div className="">
                 <label
@@ -280,7 +280,7 @@ const Register = () => {
                   Kota
                 </label>
                 <div className="flex items-center border rounded-md">
-                  <FaMapPin className="h-5 w-5 text-gray-400 ml-2" />
+                  <FaMapPin className="h-5 w-5 text-gray-400 mx-2" />
                   <input
                     name="city"
                     type="text"
@@ -293,13 +293,13 @@ const Register = () => {
               </div>{" "}
               <div className="">
                 <label
-                  className="block text-gray-700 text-sm font-bold mb-2"
+                  className="block text-gray-700 text-sm font-bold my-2"
                   htmlFor="kecamatan"
                 >
                   Kecamatan
                 </label>
                 <div className="flex items-center border rounded-md">
-                  <FaMapPin className="h-5 w-5 text-gray-400 ml-2" />
+                  <FaMapPin className="h-5 w-5 text-gray-400 mx-2" />
                   <input
                     name="district"
                     type="text"
@@ -311,7 +311,7 @@ const Register = () => {
                 </div>
               </div>
             </div>{" "}
-            <div className="mb-4 grid grid-cols-2 gap-4">
+            <div className="mb-4 md:grid md:grid-cols-2 gap-4">
               <div className="">
                 <label
                   className="block text-gray-700 text-sm font-bold mb-2"
@@ -320,7 +320,7 @@ const Register = () => {
                   Kelurahan
                 </label>
                 <div className="flex items-center border rounded-md">
-                  <FaMapPin className="h-5 w-5 text-gray-400 ml-2" />
+                  <FaMapPin className="h-5 w-5 text-gray-400 mx-2" />
                   <input
                     name="subdistrict"
                     type="text"
@@ -340,13 +340,13 @@ const Register = () => {
               </div>{" "}
               <div className="">
                 <label
-                  className="block text-gray-700 text-sm font-bold mb-2"
+                  className="block text-gray-700 text-sm font-bold my-2"
                   htmlFor="kodePos"
                 >
                   Kode Pos
                 </label>
                 <div className="flex items-center border rounded-md">
-                  <FaMapPin className="h-5 w-5 text-gray-400 ml-2" />
+                  <FaMapPin className="h-5 w-5 text-gray-400 mx-2" />
                   <input
                     name="postal_code"
                     type="text"
@@ -365,7 +365,7 @@ const Register = () => {
                 </div>
               </div>
             </div>
-            <div className="mb-4 grid grid-cols-2 gap-5">
+            <div className="mb-4 md:grid md:grid-cols-2 gap-5">
               <div>
                 <label
                   className="block text-gray-700 text-sm font-bold mb-2"

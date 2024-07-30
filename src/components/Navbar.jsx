@@ -105,9 +105,9 @@ const Navbar = () => {
             </li>
             <li>
               <Link
-                to={"/register"}
+                to={"/login"}
                 className={`md:hidden py-2 px-3 rounded md:bg-transparent md:p-0 ${
-                  pathname === "/register" ? "text-blue-700" : "text-red-600"
+                  pathname === "/login" ? "text-blue-700" : "text-red-600"
                 }`}
                 onClick={handleLinkClick}
               >
