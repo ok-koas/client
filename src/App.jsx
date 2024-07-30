@@ -72,7 +72,9 @@ const router = createBrowserRouter([
     path: "/register",
     element: (
       <div>
+        <Navbar />
         <Register />
+        <Footer />
       </div>
     ),
     errorElement: <ErrorPage />,
@@ -81,7 +83,9 @@ const router = createBrowserRouter([
     path: "/login",
     element: (
       <div>
+        <Navbar />
         <Login /> {/* Add Login component here */}
+        <Footer />
       </div>
     ),
     errorElement: <ErrorPage />,
