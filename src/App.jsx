@@ -16,6 +16,8 @@ import Error500 from "./Error500";
 import KirimOtp from "./KirimOtp";
 import VerifBerkas from "./Verifberkas";
 
+export const SERVER_URL = import.meta.env.VITE_SERVER_URL;
+
 const router = createBrowserRouter([
   {
     path: "/",
