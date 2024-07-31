@@ -15,6 +15,7 @@ import Error404 from "./Error404";
 import Error500 from "./Error500";
 import KirimOtp from "./KirimOtp";
 import VerifBerkas from "./Verifberkas";
+import ChooseLogin from "./ChooseLogin";
 
 export const SERVER_URL = import.meta.env.VITE_SERVER_URL;
 
@@ -64,6 +65,19 @@ const router = createBrowserRouter([
         <Navbar />
         <main className="flex-grow">
           <VerifBerkas />
+        </main>
+        <Footer />
+      </div>
+    ),
+    errorElement: <ErrorPage />,
+  },
+  {
+    path: "/ChooseLogin",
+    element: (
+      <div>
+        <Navbar />
+        <main className="flex-grow">
+          <ChooseLogin />
         </main>
         <Footer />
       </div>
