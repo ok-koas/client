@@ -18,7 +18,7 @@ const Navbar = () => {
   return (
     <nav className="bg-blue-50 fixed w-full z-20 top-0 start-0 border-b border-blue-200 shadow-md md:px-10 backdrop-filter backdrop-blur-lg bg-opacity-30">
       <div className="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4">
-        <Logo />
+        <Logo isActive />
         <div className="flex md:order-2 space-x-3 md:space-x-0 rtl:space-x-reverse">
           <Link to="/login" onClick={handleLinkClick}>
             <button className="text-white bg-red-700 hover:bg-red-800 focus:ring-4 focus:outline-none focus:ring-red-300 font-medium rounded-lg text-sm px-4 py-2 text-center dark:bg-red-600 dark:hover:bg-red-700 dark:focus:ring-red-800 hidden md:flex items-center space-x-2">
@@ -29,22 +29,11 @@ const Navbar = () => {
                 viewBox="0 0 16 16"
                 fill="none"
                 xmlns="http://www.w3.org/2000/svg"
-                className="ml-2"
               >
-                <g clipPath="url(#clip0_364_410)">
-                  <path
-                    d="M7.99992 10.6666L10.6666 7.99992M10.6666 7.99992L7.99992 5.33325M10.6666 7.99992H5.33325M14.6666 7.99992C14.6666 11.6818 11.6818 14.6666 7.99992 14.6666C4.31802 14.6666 1.33325 11.6818 1.33325 7.99992C1.33325 4.31802 4.31802 1.33325 7.99992 1.33325C11.6818 1.33325 14.6666 4.31802 14.6666 7.99992Z"
-                    stroke="#FEE9E7"
-                    strokeWidth="1.6"
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                  />
-                </g>
-                <defs>
-                  <clipPath id="clip0_364_410">
-                    <rect width="16" height="16" fill="white" />
-                  </clipPath>
-                </defs>
+                <path
+                  d="M8 10.667 10.667 8m0 0L8 5.333M10.667 8H5.333m9.334 0A6.667 6.667 0 1 1 1.333 8a6.667 6.667 0 0 1 13.334 0Z"
+                  stroke="#FEE9E7"
+                />
               </svg>
             </button>
           </Link>

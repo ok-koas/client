@@ -81,7 +81,7 @@ const Register = () => {
                     name="username"
                     id="username"
                     className="block px-3 w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-0 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"
-                    placeholder="subardjo"
+                    placeholder="Contoh: muhammad.subardjo"
                     required
                   />
                 </div>
@@ -101,7 +101,7 @@ const Register = () => {
                     id="nomorHandphone"
                     min={0}
                     className="block px-3 w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-0 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"
-                    placeholder="6283812345678"
+                    placeholder="Contoh: 6283812345678"
                     required
                   />
                 </div>
@@ -127,7 +127,7 @@ const Register = () => {
                 />
               </div>
             </div>
-            <div className="mb-4 md:grid md:grid-cols-2 gap-5">
+            <div className="mb-1 md:grid md:grid-cols-2 gap-5">
               <div>
                 <label
                   className="block text-gray-700 text-sm font-bold mb-2"
@@ -141,9 +141,13 @@ const Register = () => {
                     name="password"
                     type="password"
                     id="password"
+                    minLength={8}
                     className={`block px-3 w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-0 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6 ${
                       errors.password ? "border-red-500" : ""
                     }`}
+                    pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}"
+                    title="Password harus memiliki 8 huruf yang setidaknya terdiri dari 1
+              huruf besar, 1 huruf kecil, dan 1 angka"
                     placeholder="Password"
                     required
                   />
@@ -167,9 +171,13 @@ const Register = () => {
                     name="repeat_password"
                     type="password"
                     id="ulangiPassword"
+                    minLength={8}
                     className={`block px-3 w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-0 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6 ${
                       errors.ulangiPassword ? "border-red-500" : ""
                     }`}
+                    pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}"
+                    title="Password harus memiliki 8 huruf yang setidaknya terdiri dari 1
+              huruf besar, 1 huruf kecil, dan 1 angka"
                     placeholder="Ulangi Password"
                     required
                   />
@@ -181,6 +189,10 @@ const Register = () => {
                 </div>
               </div>
             </div>
+            <p className="text-blue-500 mb-4">
+              Password harus memiliki 8 huruf yang setidaknya terdiri dari 1
+              huruf besar, 1 huruf kecil, dan 1 angka
+            </p>
             <div className="mb-4 md:grid md:grid-cols-2 gap-4">
               <div className="">
                 <label
