@@ -1,5 +1,7 @@
 import React from "react";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
+import { lazy } from "react";
+
 import Navbar from "./components/Navbar";
 import HeroSection from "./components/HeroSection";
 import AlasanSection from "./components/AlasanSection";
@@ -10,12 +12,28 @@ import Footer from "./components/Footer";
 import TentangKami from "./TentangKami";
 import Register from "./Register";
 import Login from "./Login"; // Import Login component
-import ErrorPage from "./error-page";
+import ErrorPage from "./ErrorPage";
 import Error404 from "./Error404";
 import Error500 from "./Error500";
 import KirimOtp from "./KirimOtp";
-import VerifBerkas from "./Verifberkas";
+import VerifBerkas from "./VerifBerkas";
 import ChooseLogin from "./ChooseLogin";
+// const Navbar = lazy(() => import("./components/Navbar"));
+// const HeroSection = lazy(() => import("./components/HeroSection"));
+// const AlasanSection = lazy(() => import("./components/AlasanSection"));
+// const Produk = lazy(() => import("./components/Produk"));
+// const Hooker = lazy(() => import("./components/Hooker"));
+// const Hooker2 = lazy(() => import("./components/Hooker2"));
+// const Footer = lazy(() => import("./components/Footer"));
+// const TentangKami = lazy(() => import("./TentangKami"));
+// const Register = lazy(() => import("./Register"));
+// const Login = lazy(() => import("./Login"));
+// const ErrorPage = lazy(() => import("./ErrorPage"));
+// const Error404 = lazy(() => import("./Error404"));
+// const Error500 = lazy(() => import("./Error500"));
+// const KirimOtp = lazy(() => import("./KirimOtp"));
+// const VerifBerkas = lazy(() => import("./VerifBerkas"));
+// const ChooseLogin = lazy(() => import("./ChooseLogin"));
 
 export const SERVER_URL = import.meta.env.VITE_SERVER_URL;
 
