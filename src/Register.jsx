@@ -19,6 +19,7 @@ import {
   FaLockOpen,
   FaRegUser,
   FaUserTag,
+  FaAddressBook,
 } from "react-icons/fa";
 
 const Register = () => {
@@ -242,15 +243,18 @@ const Register = () => {
                   (tanpa kelurahan, kecamatan, kota, dan provinsi)
                 </span>
               </label>
-              <textarea
-                name="address"
-                type="text"
-                id="alamat"
-                className="block px-3 w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"
-                placeholder="Contoh: Jalan Cempaka Raya No. 12, Rt.2/Rw.3"
-                rows={2}
-                required
-              />
+              <div className="flex items-center border rounded-md">
+                <FaAddressBook className="h-5 w-5 text-gray-400 mx-2" />
+                <textarea
+                  name="address"
+                  type="text"
+                  id="alamat"
+                  className="block px-3 w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"
+                  placeholder="Contoh: Jalan Cempaka Raya No. 12, Rt.2/Rw.3"
+                  rows={2}
+                  required
+                />
+              </div>
             </div>
             <div className="mb-4 md:grid md:grid-cols-2 gap-4">
               <div className="">
@@ -275,7 +279,7 @@ const Register = () => {
               <div className="">
                 <label
                   className="block text-gray-700 text-sm font-bold my-2"
-                  htmlFor="province"
+                  htmlFor="provinsi"
                 >
                   Provinsi
                 </label>
