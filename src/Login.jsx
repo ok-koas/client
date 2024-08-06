@@ -120,7 +120,7 @@ const Login = () => {
             <div className="text-center mt-4">
               <button
                 type="submit"
-                className="flex items-center justify-center gap-2 bg-red-500 hover:bg-red-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline w-full"
+                className="btn bg-red-500 hover:bg-red-700 text-white font-boldrounded focus:outline-none focus:shadow-outline w-full"
               >
                 {/* <FaSignInAlt className="text-lg" /> */}
                 Login

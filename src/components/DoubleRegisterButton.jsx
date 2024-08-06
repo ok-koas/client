@@ -2,11 +2,11 @@ import React from "react";
 
 const DoubleRegisterButton = () => {
   return (
-    <div className="mt-6 md:flex md:justify-start">
-      <button className="bg-red-500 hover:bg-red-600 focus-within:bg-red-700 mb-3 md:mb-0 text-white text-sm py-2 px-4 rounded-full md:rounded-none md:rounded-l-full">
+    <div className="mt-6 md:join">
+      <button className="btn join-item bg-red-500 hover:bg-red-600 mb-3 md:mb-0 text-white text-sm rounded-full md:rounded-full ">
         Daftar Sebagai Pasien
       </button>
-      <button className="bg-gray-200 hover:bg-gray-300 focus:bg-gray-400 text-black focus:text-white text-sm py-2 px-4 rounded-full md:rounded-none md:rounded-r-full">
+      <button className="btn join-item bg-gray-200 hover:bg-gray-300 text-black text-sm rounded-full md:rounded-full">
         Daftar Sebagai Dokter
       </button>
     </div>

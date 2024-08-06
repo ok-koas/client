@@ -5,7 +5,7 @@ import logo_masjid from "../assets/lambang-masjid-yarsi.png";
 
 const Footer = () => {
   return (
-    <div className="bg-[#BFDFFE] w-full py-8 px-4 ">
+    <div className="bg-[#BFDFFE] w-full py-8 px-4 shadow-inner">
       <div className="max-w-7xl mx-auto flex flex-col md:flex-row justify-center items-start space-y-4 md:space-y-0 md:space-x-8">
         <div className="bg-white rounded-lg p-4 shadow-md border border-gray-300 w-full md:w-1/3">
           <div className="text-xl md:text-2xl font-bold text-blue-500 ">

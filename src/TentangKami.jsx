@@ -8,14 +8,16 @@ const TentangKami = () => {
   return (
     <>
       <div className="container mt-10 mx-auto px-8 md:px-40 py-16">
-        <h1 className="text-3xl font-bold mb-6">Tentang OK-Koas</h1>
+        <h1 className="text-xl sm:text-3xl font-bold mb-6 md:mb-3 lg:mb-0">
+          Tentang OK-Koas
+        </h1>
         <div className="flex flex-col lg:flex-row items-center">
           <div className="mb-5 flex justify-center align-middle lg:hidden">
             <div className="w-3/4">
               <PeopleDiscussingImage />
             </div>
           </div>
-          <div className="lg:w-1/2">
+          <div className="text-sm md:text-base lg:w-1/2">
             <p className="mb-4">
               <strong>OK-Koas</strong> adalah platform yang dirancang untuk
               mempermudah mahasiswa program koas dalam menjalankan tugas klinis
