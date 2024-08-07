@@ -513,10 +513,7 @@ const Register = () => {
 							</div>
 						</div>
 						<div className="flex justify-center mb-4">
-							<button
-								type="submit"
-								className="bg-red-500 hover:bg-red-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline btn"
-							>
+							<button type="submit" className="btn btn-primary w-full">
 								<FaUserPlus className="h-5 w-5 mr-2" />
 								Daftar Sekarang
 							</button>

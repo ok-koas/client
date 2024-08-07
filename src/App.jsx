@@ -120,7 +120,7 @@ const router = createBrowserRouter([
 				element: <Error404 />,
 			},
 			{
-				path: "error500",
+				path: "error-500",
 				element: <Error500 />,
 			},
 		],

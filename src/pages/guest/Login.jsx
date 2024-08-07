@@ -118,7 +118,7 @@ const Login = () => {
 						<div className="text-center mt-4">
 							<button
 								type="submit"
-								className="btn bg-red-500 hover:bg-red-700 text-white font-boldrounded focus:outline-none focus:shadow-outline w-full"
+								className="btn btn-primary w-full"
 							>
 								{/* <FaSignInAlt className="text-lg" /> */}
 								Login

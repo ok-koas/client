@@ -10,16 +10,23 @@ const VerifBerkas = () => {
 	// Max file size in bytes (e.g., 5 MB)
 	const maxFileSize = 5 * 1024 * 1024;
 
+	const changeProps = (file) => {
+		if (!allowedFileTypes.includes(file.type)) {
+			setFileName("");
+			setError("Mohon untuk mengirim file pdf, jpeg, atau png saja");
+		} else if (file.size > maxFileSize) {
+			setFileName("");
+			setError("Batas ukuran file adalah 5 MB");
+		} else {
+			setFileName(file.name);
+			setError("");
+		}
+	};
+
 	const handleFileChange = (event) => {
 		const file = event.target.files[0];
 		if (file) {
-			if (allowedFileTypes.includes(file.type) && file.size <= maxFileSize) {
-				setFileName(file.name);
-				setError("");
-			} else {
-				setFileName("");
-				setError("Invalid file type or file size too large.");
-			}
+			changeProps(file);
 		} else {
 			setFileName("");
 			setError("");
@@ -31,13 +38,7 @@ const VerifBerkas = () => {
 		event.stopPropagation();
 		const file = event.dataTransfer.files[0];
 		if (file) {
-			if (allowedFileTypes.includes(file.type) && file.size <= maxFileSize) {
-				setFileName(file.name);
-				setError("");
-			} else {
-				setFileName("");
-				setError("Invalid file type or file size too large.");
-			}
+			changeProps(file);
 		}
 	};
 
@@ -48,7 +49,7 @@ const VerifBerkas = () => {
 
 	return (
 		<div className="flex flex-col items-center justify-center min-h-screen bg-gray-100 pt-20 ">
-			<div className="bg-white p-6 md:p-8 lg:p-10 rounded-lg shadow-md w-full max-w-md">
+			<div className="bg-white p-6 md:p-8 lg:p-10 rounded-lg shadow-xl w-full max-w-md">
 				<h2 className="text-2xl md:text-3xl lg:text-4xl font-bold text-center mb-6">
 					Verifikasi Berkas
 				</h2>
@@ -109,10 +110,7 @@ const VerifBerkas = () => {
 						{error && <p className="mt-2 text-sm text-red-500">{error}</p>}
 					</div>
 					<div className="flex justify-center">
-						<button
-							type="submit"
-							className="px-6 py-2 bg-red-500 text-white font-semibold rounded-md hover:bg-red-600 transition duration-200"
-						>
+						<button type="submit" className="btn btn-primary w-full">
 							Lanjut
 						</button>
 					</div>
