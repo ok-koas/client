@@ -3,6 +3,7 @@ import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import { lazy, Suspense } from "react";
 import { FaSadCry } from "react-icons/fa";
 import LoadingPage from "./pages/LoadingPage";
+import GuestPage from "./layouts/guest-page";
 
 // import Navbar from "./components/Navbar";
 // import HeroSection from "./components/HeroSection";
@@ -41,116 +42,88 @@ export const SERVER_URL = import.meta.env.VITE_SERVER_URL;
 
 const router = createBrowserRouter([
 	{
-		path: "tes",
-		element: <LoadingPage />,
-	},
-	{
 		path: "/",
-		element: (
-			<>
-				<Navbar />
-				<Suspense fallback={<LoadingPage />}>
-					<main className="mt-5 md:px-8 lg:px-16">
-						<HeroSection />
-						<AlasanSection />
-						<Produk />
-						<Hooker2 />
-					</main>
-					<Footer />
-				</Suspense>
-			</>
-		),
+		element: <GuestPage />,
 		errorElement: <ErrorPage />,
-	},
-	{
-		path: "/tentang-kami",
-		element: (
-			<>
-				<Navbar />
-				<Suspense fallback={<LoadingPage />}>
-					<TentangKami />
-					<Footer />
-				</Suspense>
-			</>
-		),
-		errorElement: <ErrorPage />,
-	},
-	{
-		path: "/KirimOtp",
-		element: (
-			<>
-				<Navbar />
-				<Suspense fallback={<LoadingPage />}>
-					<KirimOtp />
-					<Footer />
-				</Suspense>
-			</>
-		),
-		errorElement: <ErrorPage />,
-	},
-	{
-		path: "/VerifBerkas",
-		element: (
-			<>
-				<Navbar />
-				<Suspense fallback={<LoadingPage />}>
-					<main className="flex-grow">
-						<VerifBerkas />
-					</main>
-					<Footer />
-				</Suspense>
-			</>
-		),
-		errorElement: <ErrorPage />,
-	},
-	{
-		path: "/ChooseLogin",
-		element: (
-			<>
-				<Navbar />
-				<Suspense fallback={<LoadingPage />}>
-					<main className="flex-grow">
-						<ChooseLogin />
-					</main>
-					<Footer />
-				</Suspense>
-			</>
-		),
-		errorElement: <ErrorPage />,
-	},
-	{
-		path: "/register",
-		element: (
-			<>
-				<Navbar />
-				<Suspense fallback={<LoadingPage />}>
-					<Register />
-					<Footer />
-				</Suspense>
-			</>
-		),
-		errorElement: <ErrorPage />,
-	},
-	{
-		path: "/login",
-		element: (
-			<>
-				<Navbar />
-				<Suspense fallback={<LoadingPage />}>
-					<Login /> {/* Add Login component here */}
-					<Footer />
-				</Suspense>
-			</>
-		),
-		errorElement: <ErrorPage />,
-	},
-	{
-		path: "*",
-		element: <Error404 />,
-	},
-	{
-		path: "/error500",
-		element: <Error500 />,
+		children: [
+			{
+				path: "tes",
+				element: <LoadingPage />,
+			},
+			{
+				index: true,
+				element: (
+					<Suspense fallback={<LoadingPage />}>
+						<main className="mt-5 md:px-8 lg:px-16">
+							<HeroSection />
+							<AlasanSection />
+							<Produk />
+							<Hooker2 />
+						</main>
+					</Suspense>
+				),
+			},
+			{
+				path: "tentang-kami",
+				element: (
+					<Suspense fallback={<LoadingPage />}>
+						<TentangKami />
+					</Suspense>
+				),
+			},
+			{
+				path: "kirim-otp",
+				element: (
+					<Suspense fallback={<LoadingPage />}>
+						<KirimOtp />
+					</Suspense>
+				),
+			},
+			{
+				path: "verifikasi-berkas",
+				element: (
+					<Suspense fallback={<LoadingPage />}>
+						<main className="flex-grow">
+							<VerifBerkas />
+						</main>
+					</Suspense>
+				),
+			},
+			{
+				path: "pilih-akun",
+				element: (
+					<Suspense fallback={<LoadingPage />}>
+						<main className="flex-grow">
+							<ChooseLogin />
+						</main>
+					</Suspense>
+				),
+			},
+			{
+				path: "register",
+				element: (
+					<Suspense fallback={<LoadingPage />}>
+						<Register />
+					</Suspense>
+				),
+			},
+			{
+				path: "login",
+				element: (
+					<Suspense fallback={<LoadingPage />}>
+						<Login /> {/* Add Login component here */}
+					</Suspense>
+				),
+			},
+			{
+				path: "*",
+				element: <Error404 />,
+			},
+			{
+				path: "error500",
+				element: <Error500 />,
+			},
+		],
 	},
 ]);
 

@@ -1,5 +1,6 @@
 import React, { useState, lazy, Suspense } from "react";
 import InputSkeletal from "../../components/skeletons/InputSkeletal";
+import { Link } from "react-router-dom";
 
 const FaUserPlus = lazy(() =>
 	import("react-icons/fa").then((module) => ({ default: module.FaUserPlus })),
@@ -525,9 +526,9 @@ const Register = () => {
 						</div>
 						<div className="text-center mt-2">
 							Sudah mempunyai akun?
-							<a href="/login" className="text-red-500 hover:text-red-700">
+							<Link to="/login" className="text-red-500 hover:text-red-700">
 								&nbsp;Masuk
-							</a>
+							</Link>
 						</div>
 					</form>
 				</div>

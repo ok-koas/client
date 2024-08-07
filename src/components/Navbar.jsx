@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { Link, useLocation } from "react-router-dom";
+import { Link, NavLink, useLocation } from "react-router-dom";
 import Logo from "./Logo";
 
 const Navbar = () => {
@@ -74,38 +74,65 @@ const Navbar = () => {
 				>
 					<ul className="flex flex-col p-4 md:p-0 mt-4 font-medium border border-blue-100 rounded-lg md:space-x-8 rtl:space-x-reverse md:flex-row md:mt-0 md:border-0 ">
 						<li>
-							<Link
+							<NavLink
+								exact
 								to="/"
-								className={`block py-2 px-3 rounded md:bg-transparent md:p-0  ${
-									pathname === "/" ? "text-blue-700" : "text-black"
-								}`}
-								aria-current="page"
+								className={({ isActive, isPending, isTransitioning }) => {
+									let classNames =
+										"block py-2 px-3 rounded md:bg-transparent md:p-0";
+									if (isPending) {
+										classNames += " text-gray-700";
+									} else if (isActive) {
+										classNames += " text-blue-600";
+									} else if (isTransitioning) {
+										classNames += " animate-bounce";
+									}
+									return classNames;
+								}}
 								onClick={handleLinkClick}
 							>
 								Beranda
-							</Link>
+							</NavLink>
 						</li>
 						<li>
-							<Link
+							<NavLink
 								to="/tentang-kami"
-								className={`block py-2 px-3 rounded md:bg-transparent md:p-0 ${
-									pathname === "/tentang-kami" ? "text-blue-700" : "text-black"
-								}`}
+								className={({ isActive, isPending, isTransitioning }) => {
+									let classNames =
+										"block py-2 px-3 rounded md:bg-transparent md:p-0";
+									if (isPending) {
+										classNames += " text-gray-700";
+									} else if (isActive) {
+										classNames += " text-blue-600";
+									} else if (isTransitioning) {
+										classNames += " animate-bounce";
+									}
+									return classNames;
+								}}
 								onClick={handleLinkClick}
 							>
 								Tentang Kami
-							</Link>
+							</NavLink>
 						</li>
 						<li>
-							<Link
-								to={"/login"}
-								className={`md:hidden py-2 px-3 rounded md:bg-transparent md:p-0 ${
-									pathname === "/login" ? "text-blue-700" : "text-red-600"
-								}`}
+							<NavLink
+								to="/login"
+								className={({ isActive, isPending, isTransitioning }) => {
+									let classNames =
+										"md:hidden py-2 px-3 rounded md:bg-transparent md:p-0";
+									if (isPending) {
+										classNames += " text-red-700";
+									} else if (isActive) {
+										classNames += " text-blue-600";
+									} else if (isTransitioning) {
+										classNames += " animate-bounce";
+									}
+									return classNames;
+								}}
 								onClick={handleLinkClick}
 							>
 								Masuk
-							</Link>
+							</NavLink>
 						</li>
 					</ul>
 				</div>

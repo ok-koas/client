@@ -3,6 +3,7 @@ import { FaUser, FaLock } from "react-icons/fa"; // Import ikon dari react-icons
 import axios from "axios"; // Import Axios
 import Logo from "../../components/Logo";
 import { SERVER_URL } from "../../App";
+import { Link } from "react-router-dom";
 
 const Login = () => {
 	const [formData, setFormData] = useState({
@@ -137,12 +138,12 @@ const Login = () => {
             </div> */}
 						<div className="flex items-center justify-center mt-4">
 							<span className="text-gray-600">Belum mempunyai akun?</span>
-							<a
-								href="/register"
+							<Link
+								to="/register"
 								className="text-red-500 hover:text-red-700 ml-2 flex items-center"
 							>
 								Daftar Sekarang
-							</a>
+							</Link>
 						</div>
 					</form>
 				</div>
