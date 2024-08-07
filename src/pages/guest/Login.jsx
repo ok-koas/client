@@ -1,9 +1,8 @@
 import React, { useState } from "react";
-import { FaGoogle, FaUser, FaLock, FaSignInAlt } from "react-icons/fa"; // Import ikon dari react-icons
-import icon from "./assets/logo.png"; // Import gambar
+import { FaUser, FaLock } from "react-icons/fa"; // Import ikon dari react-icons
 import axios from "axios"; // Import Axios
-import Logo from "./components/Logo";
-import { SERVER_URL } from "./App";
+import Logo from "../../components/Logo";
+import { SERVER_URL } from "../../App";
 
 const Login = () => {
   const [formData, setFormData] = useState({
