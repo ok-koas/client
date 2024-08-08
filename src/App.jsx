@@ -1,9 +1,10 @@
 import React from "react";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import { lazy, Suspense } from "react";
-import { FaSadCry } from "react-icons/fa";
 import LoadingPage from "./pages/LoadingPage";
 import GuestPage from "./layouts/guest-page";
+import { Helmet } from "react-helmet";
+import Title from "./components/Title";
 
 // import Navbar from "./components/Navbar";
 // import HeroSection from "./components/HeroSection";
@@ -39,6 +40,7 @@ const VerifBerkas = lazy(() => import("./pages/guest/VerifBerkas"));
 const ChooseLogin = lazy(() => import("./pages/guest/ChooseLogin"));
 
 export const SERVER_URL = import.meta.env.VITE_SERVER_URL;
+const current_title = "Ok-Koas";
 
 const router = createBrowserRouter([
 	{
@@ -53,82 +55,117 @@ const router = createBrowserRouter([
 			{
 				index: true,
 				element: (
-					<Suspense fallback={<LoadingPage />}>
-						<main className="mt-5 md:px-8 lg:px-16">
-							<HeroSection />
-							<AlasanSection />
-							<Produk />
-							<Hooker2 />
-						</main>
-					</Suspense>
+					<>
+						<Title name="" />
+						<Suspense fallback={<LoadingPage />}>
+							<main className="mt-5 md:px-8 lg:px-16">
+								<HeroSection />
+								<AlasanSection />
+								<Produk />
+								<Hooker2 />
+							</main>
+						</Suspense>
+					</>
 				),
 			},
 			{
 				path: "tentang-kami",
 				element: (
-					<Suspense fallback={<LoadingPage />}>
-						<TentangKami />
-					</Suspense>
+					<>
+						<Title name="Tentang Kami" />
+						<Suspense fallback={<LoadingPage />}>
+							<TentangKami />
+						</Suspense>
+					</>
 				),
 			},
 			{
 				path: "kirim-otp",
 				element: (
-					<Suspense fallback={<LoadingPage />}>
-						<KirimOtp />
-					</Suspense>
+					<>
+						<Title name="Verifikasi OTP" />
+						<Suspense fallback={<LoadingPage />}>
+							<KirimOtp />
+						</Suspense>
+					</>
 				),
 			},
 			{
 				path: "verifikasi-berkas",
 				element: (
-					<Suspense fallback={<LoadingPage />}>
-						<main className="flex-grow">
-							<VerifBerkas />
-						</main>
-					</Suspense>
+					<>
+						<Title name="Verifikasi Berkas" />
+						<Suspense fallback={<LoadingPage />}>
+							<main className="flex-grow">
+								<VerifBerkas />
+							</main>
+						</Suspense>
+					</>
 				),
 			},
 			{
 				path: "pilih-akun",
 				element: (
-					<Suspense fallback={<LoadingPage />}>
-						<main className="flex-grow">
-							<ChooseLogin />
-						</main>
-					</Suspense>
+					<>
+						<Title name="Pilih Akun" />
+						<Suspense fallback={<LoadingPage />}>
+							<main className="flex-grow">
+								<ChooseLogin />
+							</main>
+						</Suspense>
+					</>
 				),
 			},
 			{
 				path: "register",
 				element: (
-					<Suspense fallback={<LoadingPage />}>
-						<Register />
-					</Suspense>
+					<>
+						<Title name="Register" />
+						<Suspense fallback={<LoadingPage />}>
+							<Register />
+						</Suspense>
+					</>
 				),
 			},
 			{
 				path: "login",
 				element: (
-					<Suspense fallback={<LoadingPage />}>
-						<Login /> {/* Add Login component here */}
-					</Suspense>
+					<>
+						<Title name="Login" />
+						<Suspense fallback={<LoadingPage />}>
+							<Login /> {/* Add Login component here */}
+						</Suspense>
+					</>
 				),
 			},
 			{
 				path: "*",
-				element: <Error404 />,
+				element: (
+					<>
+						<Title name="Halaman tidak ditemukan" />
+						<Error404 />
+					</>
+				),
 			},
 			{
 				path: "error-500",
-				element: <Error500 />,
+				element: (
+					<>
+						<Title name="Server bermasalah" />
+						<Error500 />
+					</>
+				),
 			},
 		],
 	},
 ]);
 
 function App() {
-	return <RouterProvider router={router} />;
+	return (
+		<>
+			<RouterProvider router={router} />;
+		</>
+	);
 }
 
 export default App;
