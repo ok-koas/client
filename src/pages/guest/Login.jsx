@@ -53,7 +53,7 @@ const Login = () => {
 
 	return (
 		<>
-			<div className="container mx-auto px-4 py-10 ">
+			<div className="container mx-auto sm:px-4 md:py-10 ">
 				<div className="bg-white shadow-md rounded-lg p-8 max-w-md mx-auto">
 					<div className="text-center mb-6">
 						<Logo size="4xl" />
@@ -77,7 +77,7 @@ const Login = () => {
 									id="username"
 									value={formData.username}
 									onChange={handleChange}
-									className={`block px-3 w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-0 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6 ${
+									className={`block px-3 w-full text-xs rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-0 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6 ${
 										errors.username ? "border-red-500" : ""
 									}`}
 									placeholder="muhammad.subardjo"
@@ -104,7 +104,7 @@ const Login = () => {
 									id="password"
 									value={formData.password}
 									onChange={handleChange}
-									className={`block px-3 w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-0 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6 ${
+									className={`block px-3 w-full text-xs rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-0 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6 ${
 										errors.password ? "border-red-500" : ""
 									}`}
 									placeholder="Password"
@@ -137,7 +137,7 @@ const Login = () => {
 							</button>
 						</div>
 						<div className="text-center mt-4">
-							<div className="divider divider-secondary text-gray-500">
+							<div className="divider divider-secondary text-gray-500 text-sm md:text-base">
 								Atau
 							</div>
 						</div>
@@ -150,7 +150,7 @@ const Login = () => {
                 Login with Google
               </button>
             </div> */}
-						<div className="flex items-center justify-center mt-4">
+						<div className="flex items-center justify-center mt-4 text-sm md:text-base">
 							<span className="text-gray-600">Belum mempunyai akun?</span>
 							<Link
 								to="/register"
