@@ -1,7 +1,7 @@
 import React from "react";
 import { Helmet } from "react-helmet";
 
-export default function TItle(props) {
+export default function Title(props) {
 	const separator = props.separator ?? "|";
 	const name = props.name ?? "";
 

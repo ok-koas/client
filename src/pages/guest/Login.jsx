@@ -63,7 +63,7 @@ const Login = () => {
 					<form onSubmit={handleSubmit}>
 						<div className="mb-4">
 							<label
-								className="block text-gray-700 text-sm font-bold mb-2"
+								className="block text-gray-700 text-sm font-bold mb-2 select-none"
 								htmlFor="username"
 							>
 								Username
@@ -90,7 +90,7 @@ const Login = () => {
 						</div>
 						<div className="mb-4">
 							<label
-								className="block text-gray-700 text-sm font-bold mb-2"
+								className="block text-gray-700 text-sm font-bold mb-2 select-none"
 								htmlFor="password"
 							>
 								Password
@@ -115,17 +115,31 @@ const Login = () => {
 								<p className="text-red-500 text-xs italic">{errors.password}</p>
 							)}
 						</div>
-						<div className="text-center mt-4">
-							<button
-								type="submit"
-								className="btn btn-primary w-full"
+						<div className="flex align-middle">
+							<input
+								id="remember-me"
+								type="checkbox"
+								className="checkbox checkbox-primary"
+								defaultChecked
+							/>
+							&nbsp;&nbsp;
+							<label
+								htmlFor="remember-me"
+								className="font-semibold text-sm select-none"
 							>
+								Ingat saya
+							</label>
+						</div>
+						<div className="text-center mt-4">
+							<button type="submit" className="btn btn-primary w-full">
 								{/* <FaSignInAlt className="text-lg" /> */}
 								Login
 							</button>
 						</div>
 						<div className="text-center mt-4">
-							<span className="text-gray-600">Atau</span>
+							<div className="divider divider-secondary text-gray-500">
+								Atau
+							</div>
 						</div>
 						{/* <div className="text-center mt-2">
               <button

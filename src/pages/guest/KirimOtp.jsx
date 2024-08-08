@@ -28,7 +28,7 @@ const KirimOtp = () => {
 						placeholder="*"
 						skipDefaultStyles={true}
 						inputStyle={
-							"bg-gray-300 w-8 h-8 md:w-10 md:h-10 lg:w-12 lg:h-12 text-center border-none rounded-md caret-blue-500 text-gray-700 outline-none font-semibold focus:bg-blue-100 transition duration-300"
+							"bg-gray-300 w-8 h-8 md:w-10 md:h-10 lg:w-12 lg:h-12 text-center border-none rounded-md caret-red-500 text-gray-700 outline-none font-semibold focus:bg-blue-100 transition duration-300"
 						}
 					/>
 					{/* <div className="w-full flex flex-row gap-2 md:gap-3 lg:gap-4 items-center justify-center">
