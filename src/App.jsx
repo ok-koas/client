@@ -5,6 +5,7 @@ import LoadingPage from "./pages/LoadingPage";
 import GuestPage from "./layouts/guest-page";
 import { Helmet } from "react-helmet";
 import Title from "./components/Title";
+import Test from "./pages/Test";
 
 // import Navbar from "./components/Navbar";
 // import HeroSection from "./components/HeroSection";
@@ -50,7 +51,7 @@ const router = createBrowserRouter([
 		children: [
 			{
 				path: "tes",
-				element: <LoadingPage />,
+				element: <Test />,
 			},
 			{
 				index: true,
@@ -58,7 +59,7 @@ const router = createBrowserRouter([
 					<>
 						<Title name="" />
 						<Suspense fallback={<LoadingPage />}>
-							<main className="mt-5 md:px-8 lg:px-16">
+							<main className="md:px-8 lg:px-16">
 								<HeroSection />
 								<AlasanSection />
 								<Produk />

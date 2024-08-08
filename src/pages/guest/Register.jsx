@@ -72,7 +72,7 @@ const Register = () => {
 
 	return (
 		<>
-			<div className="container mx-auto px-4 py-20 mt-10">
+			<div className="container mx-auto px-4 pb-10 pt-5 ">
 				<div className="bg-white shadow-md rounded-lg p-8 max-w-2xl mx-auto">
 					<h2 className="text-3xl font-bold mb-6 text-center">
 						Registrasi Pengguna

@@ -53,7 +53,7 @@ const Login = () => {
 
 	return (
 		<>
-			<div className="container mx-auto px-4 py-20 mt-10">
+			<div className="container mx-auto px-4 py-10 ">
 				<div className="bg-white shadow-md rounded-lg p-8 max-w-md mx-auto">
 					<div className="text-center mb-6">
 						<Logo size="4xl" />

@@ -48,7 +48,7 @@ const VerifBerkas = () => {
 	};
 
 	return (
-		<div className="flex flex-col items-center justify-center min-h-screen bg-gray-100 pt-20 ">
+		<div className="flex flex-col items-center justify-center  bg-gray-100 py-5 ">
 			<div className="bg-white p-6 md:p-8 lg:p-10 rounded-lg shadow-xl w-full max-w-md">
 				<h2 className="text-2xl md:text-3xl lg:text-4xl font-bold text-center mb-6">
 					Verifikasi Berkas

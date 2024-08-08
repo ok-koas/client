@@ -6,7 +6,7 @@ const KirimOtp = () => {
 
 	return (
 		<>
-			<div className="flex items-center justify-center min-h-screen bg-gray-100">
+			<div className="flex items-center justify-center py-20 bg-gray-100">
 				<form className="w-64 md:w-80 lg:w-96 h-auto bg-white flex flex-col items-center justify-center p-5 gap-5 relative shadow-md rounded-lg">
 					<span className="text-lg md:text-xl lg:text-2xl font-bold text-black">
 						Masukkan OTP

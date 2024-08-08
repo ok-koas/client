@@ -7,7 +7,7 @@ export default function GuestPage() {
 	return (
 		<>
 			<Navbar />;
-			<main className="bg-blue-50">
+			<main className="bg-blue-50 mt-20">
 				<Outlet />
 			</main>
 			<Footer />
