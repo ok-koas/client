@@ -1,4 +1,4 @@
-import React, { useState, lazy, Suspense } from "react";
+import { useState, lazy, Suspense } from "react";
 import InputSkeletal from "../../components/skeletons/InputSkeletal";
 import { Link } from "react-router-dom";
 

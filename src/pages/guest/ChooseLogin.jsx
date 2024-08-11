@@ -1,4 +1,3 @@
-import React from "react";
 import { FaUser, FaUserMd } from "react-icons/fa";
 
 const ChooseLogin = () => {

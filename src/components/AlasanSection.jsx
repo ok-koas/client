@@ -1,5 +1,3 @@
-import React from "react";
-
 const AlasanSection = () => {
 	return (
 		<section className="text-center py-5 mx-5 bg-blue-50 grid grid-cols-10">

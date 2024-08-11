@@ -1,5 +1,5 @@
-import React from "react";
 import { Link } from "react-router-dom";
+import PropTypes from "prop-types";
 
 const Logo = ({ size = "2xl", isActive = false }) => {
 	return (
@@ -10,6 +10,11 @@ const Logo = ({ size = "2xl", isActive = false }) => {
 			</div>
 		</Link>
 	);
+};
+
+Logo.propTypes = {
+	size: PropTypes.string,
+	isActive: PropTypes.boolean,
 };
 
 export default Logo;

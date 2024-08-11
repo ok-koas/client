@@ -1,6 +1,3 @@
-import React from "react";
-import Navbar from "../../components/Navbar";
-import Footer from "../../components/Footer";
 import DoubleRegisterButton from "../../components/DoubleRegisterButton";
 import PeopleDiscussingImage from "../../components/PeopleDiscussingImage";
 

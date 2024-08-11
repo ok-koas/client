@@ -1,5 +1,3 @@
-import React, { Fragment } from "react";
-
 export default function LoadingPage() {
 	return (
 		<div className="min-h-screen flex justify-center align-middle">

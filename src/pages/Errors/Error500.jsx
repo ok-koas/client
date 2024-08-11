@@ -1,22 +1,20 @@
-import React from "react";
-
 const Error500 = () => {
 	return (
-		<div class="w-full pb-10 flex flex-col lg:flex-row items-center justify-center space-y-16 lg:space-y-0 space-x-8 2xl:space-x-0">
-			<div class="w-full lg:w-1/2 flex flex-col items-center justify-center lg:px-2 xl:px-0 text-center">
-				<p class="text-7xl md:text-8xl lg:text-9xl font-bold tracking-wider text-secondary">
+		<div className="w-full pb-10 flex flex-col lg:flex-row items-center justify-center space-y-16 lg:space-y-0 space-x-8 2xl:space-x-0">
+			<div className="w-full lg:w-1/2 flex flex-col items-center justify-center lg:px-2 xl:px-0 text-center">
+				<p className="text-7xl md:text-8xl lg:text-9xl font-bold tracking-wider text-secondary">
 					500
 				</p>
-				<p class="text-4xl md:text-5xl lg:text-6xl font-bold tracking-wider text-secondary mt-2">
+				<p className="text-4xl md:text-5xl lg:text-6xl font-bold tracking-wider text-secondary mt-2">
 					Server Error
 				</p>
-				<p class="text-lg md:text-xl lg:text-2xl text-gray-500 my-12">
+				<p className="text-lg md:text-xl lg:text-2xl text-gray-500 my-12">
 					Whoops, ada yang salah dengan server kami.
 				</p>
 			</div>
-			<div class="w-1/2 lg:h-full flex lg:items-end justify-center p-4">
+			<div className="w-1/2 lg:h-full flex lg:items-end justify-center p-4">
 				<svg
-					class="w-full text-blue-600"
+					className="w-full text-blue-600"
 					xmlns="http://www.w3.org/2000/svg"
 					data-name="Layer 1"
 					viewBox="0 0 1119.609 699"
@@ -61,8 +59,8 @@ const Error500 = () => {
 						d="M462.61 626c90 23 263-30 282-90m-435-277s130-36 138 80-107 149-17 172m-246.599 26.283s39.073-10.82 41.477 24.045-32.16 44.783-5.11 51.695"
 						fill="none"
 						stroke="#2f2e41"
-						stroke-miterlimit="10"
-						stroke-width="2"
+						strokeMiterlimit="10"
+						strokeWidth="2"
 					/>
 					<path
 						d="m778.705 563.24-7.878 50.295s-38.782 20.603-11.513 21.209 155.733 0 155.733 0 24.845 0-14.543-21.815l-7.878-52.719Z"

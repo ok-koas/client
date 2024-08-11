@@ -1,9 +1,8 @@
-import React from "react";
 import { Helmet } from "react-helmet";
+import PropTypes from "prop-types";
 
 export default function Title(props) {
-	const separator = props.separator ?? "|";
-	const name = props.name ?? "";
+	const { separator, name } = props;
 
 	return (
 		<Helmet>
@@ -13,3 +12,13 @@ export default function Title(props) {
 		</Helmet>
 	);
 }
+
+Title.propTypes = {
+	separator: PropTypes.string,
+	name: PropTypes.string,
+};
+
+Title.defaultProps = {
+	separator: "|",
+	name: "",
+};

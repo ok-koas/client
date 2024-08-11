@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import { useState } from "react";
 import { FaUser, FaLock } from "react-icons/fa"; // Import ikon dari react-icons
 import axios from "axios"; // Import Axios
 import Logo from "../../components/Logo";

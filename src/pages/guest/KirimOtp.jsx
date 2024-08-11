@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import { useState } from "react";
 import OTPInput from "react-otp-input";
 
 const KirimOtp = () => {

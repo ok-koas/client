@@ -1,9 +1,7 @@
-import React from "react";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import { lazy, Suspense } from "react";
 import LoadingPage from "./pages/LoadingPage";
 import GuestPage from "./layouts/guest-page";
-import { Helmet } from "react-helmet";
 import Title from "./components/Title";
 import Test from "./pages/Test";
 
@@ -23,13 +21,10 @@ import Test from "./pages/Test";
 // import KirimOtp from "./KirimOtp";
 // import VerifBerkas from "./VerifBerkas";
 // import ChooseLogin from "./ChooseLogin";
-const Navbar = lazy(() => import("./components/Navbar"));
 const HeroSection = lazy(() => import("./components/HeroSection"));
 const AlasanSection = lazy(() => import("./components/AlasanSection"));
 const Produk = lazy(() => import("./components/Produk"));
-const Hooker = lazy(() => import("./components/Hooker"));
 const Hooker2 = lazy(() => import("./components/Hooker2"));
-const Footer = lazy(() => import("./components/Footer"));
 const TentangKami = lazy(() => import("./pages/guest/TentangKami"));
 const Register = lazy(() => import("./pages/guest/Register"));
 const Login = lazy(() => import("./pages/guest/Login"));
@@ -41,7 +36,6 @@ const VerifBerkas = lazy(() => import("./pages/guest/VerifBerkas"));
 const ChooseLogin = lazy(() => import("./pages/guest/ChooseLogin"));
 
 export const SERVER_URL = import.meta.env.VITE_SERVER_URL;
-const current_title = "Ok-Koas";
 
 const router = createBrowserRouter([
 	{

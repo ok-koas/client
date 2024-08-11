@@ -1,11 +1,9 @@
-import React, { useState } from "react";
-import { Link, NavLink, useLocation } from "react-router-dom";
+import { useState } from "react";
+import { Link, NavLink } from "react-router-dom";
 import Logo from "./Logo";
 
 const Navbar = () => {
 	const [isOpen, setIsOpen] = useState(false);
-	const location = useLocation();
-	const { pathname } = location;
 
 	const toggleMenu = () => {
 		setIsOpen(!isOpen);
