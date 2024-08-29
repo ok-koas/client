@@ -49,7 +49,7 @@ const VerifBerkas = () => {
 
 	return (
 		<div className="flex flex-col items-center justify-center  bg-gray-100 py-5 ">
-			<div className="bg-white p-6 md:p-8 lg:p-10 rounded-lg shadow-xl w-full max-w-md">
+			<div className="bg-neutral p-6 md:p-8 lg:p-10 rounded-lg shadow-xl w-full max-w-md">
 				<h2 className="text-2xl md:text-3xl lg:text-4xl font-bold text-center mb-6">
 					Verifikasi Berkas
 				</h2>
@@ -64,7 +64,7 @@ const VerifBerkas = () => {
 						<input
 							type="text"
 							id="npm-str"
-							className="px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-blue-500"
+							className="px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-accent0 focus:border-accent0"
 							placeholder="NPM Yarsi / Nomor STR"
 							required
 						/>
@@ -77,7 +77,7 @@ const VerifBerkas = () => {
 							Bukti KTM / STR
 						</label>
 						<div
-							className="flex items-center justify-center w-full h-32 md:h-40 lg:h-48 border-2 border-dashed border-gray-300 rounded-lg cursor-pointer hover:border-blue-500"
+							className="flex items-center justify-center w-full h-32 md:h-40 lg:h-48 border-2 border-dashed border-gray-300 rounded-lg cursor-pointer hover:border-accent0"
 							onDrop={handleDrop}
 							onDragOver={handleDragOver}
 						>
@@ -87,7 +87,7 @@ const VerifBerkas = () => {
 							>
 								<div className="flex flex-col items-center justify-center pt-7">
 									<svg
-										className="w-8 h-8 md:w-12 md:h-12 text-blue-500"
+										className="w-8 h-8 md:w-12 md:h-12 text-accent0"
 										viewBox="0 0 640 512"
 										height="1em"
 										xmlns="http://www.w3.org/2000/svg"

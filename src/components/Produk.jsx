@@ -1,12 +1,11 @@
-
 const Produk = () => {
 	return (
-		<div className="bg-blue-50 min-h-screen flex flex-col items-center p-10">
+		<div className="bg-accent min-h-screen flex flex-col items-center p-10">
 			<h1 className="text-lg md:text-3xl font-bold text-center mb-10">
-				Layanan <span className="text-blue-600">Kami</span>
+				Layanan <span className="text-secondary">Kami</span>
 			</h1>
 			<div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
-				<div className="card w-70 shadow-xl mb-4">
+				<div className="card bg-neutral w-70 shadow-xl mb-4">
 					<figure>
 						<img
 							src="src/assets/waiting-place.jpg"
@@ -22,7 +21,7 @@ const Produk = () => {
 						</p>
 					</div>
 				</div>
-				<div className="card w-70 shadow-xl mb-4">
+				<div className="card bg-neutral w-70 shadow-xl mb-4">
 					<figure>
 						<img
 							src="src/assets/step.png"
@@ -38,7 +37,7 @@ const Produk = () => {
 						</p>
 					</div>
 				</div>
-				<div className="card w-70 shadow-xl mb-4">
+				<div className="card bg-neutral w-70 shadow-xl mb-4">
 					<figure>
 						<img
 							src="src/assets/schedules-and-reminders.jpg"
@@ -56,7 +55,7 @@ const Produk = () => {
 						</p>
 					</div>
 				</div>
-				<div className="card w-70 shadow-xl mb-4">
+				<div className="card bg-neutral w-70 shadow-xl mb-4">
 					<figure>
 						<img
 							src="src/assets/management.jpg"
@@ -72,7 +71,7 @@ const Produk = () => {
 						</p>
 					</div>
 				</div>
-				<div className="card w-70 shadow-xl mb-4">
+				<div className="card bg-neutral w-70 shadow-xl mb-4">
 					<figure>
 						<img
 							src="src/assets/Medis.jpeg"
@@ -88,7 +87,7 @@ const Produk = () => {
 						</p>
 					</div>
 				</div>
-				<div className="card w-70 shadow-xl mb-4">
+				<div className="card bg-neutral w-70 shadow-xl mb-4">
 					<figure>
 						<img
 							src="src/assets/interaksi.webp"
@@ -108,7 +107,7 @@ const Produk = () => {
 				</div>
 				{/* <a
           href="/link1"
-          className="block bg-white p-6 rounded-lg shadow-md hover:opacity-80"
+          className="block bg-neutral p-6 rounded-lg shadow-md hover:opacity-80"
         >
           <div className="bg-gray-200 h-40 flex items-center justify-center mb-4">
             <img
@@ -127,7 +126,7 @@ const Produk = () => {
         </a>
         <a
           href="/link2"
-          className="block bg-white p-6 rounded-lg shadow-md hover:opacity-80"
+          className="block bg-neutral p-6 rounded-lg shadow-md hover:opacity-80"
         >
           <div className="bg-gray-200 h-40 flex items-center justify-center mb-4">
             <img
@@ -146,7 +145,7 @@ const Produk = () => {
         </a>
         <a
           href="/link3"
-          className="block bg-white p-6 rounded-lg shadow-md hover:opacity-80"
+          className="block bg-neutral p-6 rounded-lg shadow-md hover:opacity-80"
         >
           <div className="bg-gray-200 h-40 flex items-center justify-center mb-4">
             <img
@@ -165,7 +164,7 @@ const Produk = () => {
         </a>
         <a
           href="/link4"
-          className="block bg-white p-6 rounded-lg shadow-md hover:opacity-80"
+          className="block bg-neutral p-6 rounded-lg shadow-md hover:opacity-80"
         >
           <div className="bg-gray-200 h-40 flex items-center justify-center mb-4">
             <img
@@ -184,7 +183,7 @@ const Produk = () => {
         </a>
         <a
           href="/link5"
-          className="block bg-white p-6 rounded-lg shadow-md hover:opacity-80"
+          className="block bg-neutral p-6 rounded-lg shadow-md hover:opacity-80"
         >
           <div className="bg-gray-200 h-40 flex items-center justify-center mb-4">
             <img
@@ -203,7 +202,7 @@ const Produk = () => {
         </a>
         <a
           href="/link6"
-          className="block bg-white p-6 rounded-lg shadow-md hover:opacity-80"
+          className="block bg-neutral p-6 rounded-lg shadow-md hover:opacity-80"
         >
           <div className="bg-gray-200 h-40 flex items-center justify-center mb-4">
             <img

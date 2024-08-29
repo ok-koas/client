@@ -5,10 +5,10 @@ const Hookers2 = () => {
 	return (
 		<>
 			<div className="flex align-middle justify-center mb-8">
-				<div className="bg-white w-10/12 p-8 shadow-xl rounded-xl md:block md:columns-2xs lg:columns-2 content-center">
-					<h2 className="text-lg md:text-2xl font-bold text-black mb-4">
+				<div className="bg-neutral w-10/12 p-8 shadow-xl rounded-xl md:block md:columns-2xs lg:columns-2 content-center">
+					<h2 className="text-lg md:text-2xl font-bold mb-4">
 						Bergabunglah dengan OK-
-						<span className="text-blue-500">Koas</span> Sekarang!
+						<span className="text-accent0">Koas</span> Sekarang!
 					</h2>
 					<p className="mb-8 text-sm md:text-base">
 						Tingkatkan Kinerja dan Pengalaman Klinis Anda dengan Fitur-Fitur

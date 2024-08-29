@@ -1,12 +1,16 @@
 import Navbar from "../components/Navbar";
 import Footer from "../components/Footer";
 import { Outlet } from "react-router-dom";
+import { Helmet } from "react-helmet";
 
 export default function GuestPage() {
 	return (
 		<>
-			<Navbar />;
-			<main className="bg-blue-50 mt-20">
+			<Helmet>
+				<body className="bg-accent" />
+			</Helmet>
+			<Navbar />
+			<main className="pt-24">
 				<Outlet />
 			</main>
 			<Footer />

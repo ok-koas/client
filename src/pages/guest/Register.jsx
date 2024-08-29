@@ -73,7 +73,7 @@ const Register = () => {
 	return (
 		<>
 			<div className="container mx-auto sm:px-4 md:pb-10 md:pt-5 ">
-				<div className="bg-white shadow-md rounded-lg p-8 max-w-2xl mx-auto">
+				<div className="bg-neutral shadow-md rounded-lg p-8 max-w-2xl mx-auto">
 					<h2 className="text-xl md:text-3xl font-bold mb-6 text-center">
 						Registrasi Pengguna
 					</h2>
@@ -81,7 +81,7 @@ const Register = () => {
 						<div className="mb-4">
 							<Suspense fallback={<InputSkeletal />}>
 								<label
-									className="block text-gray-700 text-sm font-bold mb-2"
+									className="block text-primary-gray text-sm font-bold mb-2"
 									htmlFor="namaLengkap"
 								>
 									Nama Lengkap
@@ -103,7 +103,7 @@ const Register = () => {
 							<div className="mb-4">
 								<Suspense fallback={<InputSkeletal />}>
 									<label
-										className="block text-gray-700 text-sm font-bold mb-2"
+										className="block text-primary-gray text-sm font-bold mb-2"
 										htmlFor="username"
 									>
 										Username
@@ -124,7 +124,7 @@ const Register = () => {
 							<div className="mb-4">
 								<Suspense fallback={<InputSkeletal />}>
 									<label
-										className="block text-gray-700 text-sm font-bold mb-2"
+										className="block text-primary-gray text-sm font-bold mb-2"
 										htmlFor="nomorHandphone"
 									>
 										Nomor Handphone
@@ -147,7 +147,7 @@ const Register = () => {
 						<div className="mb-4">
 							<Suspense fallback={<InputSkeletal />}>
 								<label
-									className="block text-gray-700 text-sm font-bold mb-2"
+									className="block text-primary-gray text-sm font-bold mb-2"
 									htmlFor="email"
 								>
 									Email (Opsional)
@@ -170,7 +170,7 @@ const Register = () => {
 							<div>
 								<Suspense fallback={<InputSkeletal />}>
 									<label
-										className="block text-gray-700 text-sm font-bold mb-2"
+										className="block text-primary-gray text-sm font-bold mb-2"
 										htmlFor="password"
 									>
 										Password
@@ -202,7 +202,7 @@ const Register = () => {
 							<div>
 								<Suspense fallback={<InputSkeletal />}>
 									<label
-										className="block text-gray-700 text-sm font-bold my-2"
+										className="block text-primary-gray text-sm font-bold my-2"
 										htmlFor="ulangiPassword"
 									>
 										Ulangi Password
@@ -233,7 +233,7 @@ const Register = () => {
 							</div>
 						</div>
 						<Suspense fallback={<div className="skeleton h-10 rounded-none" />}>
-							<p className="text-blue-500 mb-4 text-sm">
+							<p className="text-accent0 mb-4 text-sm">
 								Password harus memiliki 8 huruf yang setidaknya terdiri dari 1
 								huruf besar, 1 huruf kecil, dan 1 angka
 							</p>
@@ -242,7 +242,7 @@ const Register = () => {
 							<div>
 								<Suspense fallback={<InputSkeletal />}>
 									<label
-										className="block text-gray-700 text-sm font-bold mb-2"
+										className="block text-primary-gray text-sm font-bold mb-2"
 										htmlFor="kotaTempatLahir"
 									>
 										Kota Tempat Lahir
@@ -263,7 +263,7 @@ const Register = () => {
 							<div>
 								<Suspense fallback={<InputSkeletal />}>
 									<label
-										className="block text-gray-700 text-sm font-bold my-2"
+										className="block text-primary-gray text-sm font-bold my-2"
 										htmlFor="tanggalLahir"
 									>
 										Tanggal Lahir
@@ -284,7 +284,7 @@ const Register = () => {
 						<div className="mb-4">
 							<Suspense fallback={<InputSkeletal />}>
 								<label
-									className="block text-gray-700 text-sm font-bold mb-2"
+									className="block text-primary-gray text-sm font-bold mb-2"
 									htmlFor="alamat"
 								>
 									Alamat{" "}
@@ -310,7 +310,7 @@ const Register = () => {
 							<div>
 								<Suspense fallback={<InputSkeletal />}>
 									<label
-										className="block text-gray-700 text-sm font-bold mb-2"
+										className="block text-primary-gray text-sm font-bold mb-2"
 										htmlFor="negara"
 									>
 										Negara
@@ -331,7 +331,7 @@ const Register = () => {
 							<div>
 								<Suspense fallback={<InputSkeletal />}>
 									<label
-										className="block text-gray-700 text-sm font-bold my-2"
+										className="block text-primary-gray text-sm font-bold my-2"
 										htmlFor="provinsi"
 									>
 										Provinsi
@@ -354,7 +354,7 @@ const Register = () => {
 							<div>
 								<Suspense fallback={<InputSkeletal />}>
 									<label
-										className="block text-gray-700 text-sm font-bold mb-2"
+										className="block text-primary-gray text-sm font-bold mb-2"
 										htmlFor="kota"
 									>
 										Kota
@@ -375,7 +375,7 @@ const Register = () => {
 							<div>
 								<Suspense fallback={<InputSkeletal />}>
 									<label
-										className="block text-gray-700 text-sm font-bold my-2"
+										className="block text-primary-gray text-sm font-bold my-2"
 										htmlFor="kecamatan"
 									>
 										Kecamatan
@@ -398,7 +398,7 @@ const Register = () => {
 							<div>
 								<Suspense fallback={<InputSkeletal />}>
 									<label
-										className="block text-gray-700 text-sm font-bold mb-2"
+										className="block text-primary-gray text-sm font-bold mb-2"
 										htmlFor="kelurahan"
 									>
 										Kelurahan
@@ -426,7 +426,7 @@ const Register = () => {
 							<div>
 								<Suspense fallback={<InputSkeletal />}>
 									<label
-										className="block text-gray-700 text-sm font-bold my-2"
+										className="block text-primary-gray text-sm font-bold my-2"
 										htmlFor="kodePos"
 									>
 										Kode Pos
@@ -456,7 +456,7 @@ const Register = () => {
 							<div>
 								<Suspense fallback={<InputSkeletal />}>
 									<label
-										className="block text-gray-700 text-sm font-bold mb-2"
+										className="block text-primary-gray text-sm font-bold mb-2"
 										htmlFor="riwayatKesehatan"
 									>
 										Riwayat Kesehatan{" "}
@@ -466,7 +466,7 @@ const Register = () => {
 										name="medical_history"
 										type="text"
 										id="riwayatKesehatan"
-										className="shadow appearance-none border-r-2 rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+										className="shadow appearance-none border-r-2 rounded w-full py-2 px-3 text-primary-gray leading-tight focus:outline-none focus:shadow-outline"
 										placeholder="Riwayat Kesehatan"
 										rows={6}
 									/>
@@ -476,7 +476,7 @@ const Register = () => {
 								<div className="mb-5">
 									<Suspense fallback={<InputSkeletal />}>
 										<label
-											className="block text-gray-700 text-sm font-bold mb-2"
+											className="block text-primary-gray text-sm font-bold mb-2"
 											htmlFor="Asuransi"
 										>
 											Asuransi <span className="text-gray-500">(Opsional)</span>
@@ -493,7 +493,7 @@ const Register = () => {
 								<div>
 									<Suspense fallback={<InputSkeletal />}>
 										<label
-											className="block text-gray-700 text-sm font-bold mb-2 "
+											className="block text-primary-gray text-sm font-bold mb-2 "
 											htmlFor="nomor-asuransi"
 										>
 											Nomor Polis Asuransi{" "}
@@ -505,7 +505,7 @@ const Register = () => {
 											name="insurance_policy_number"
 											type="text"
 											id="nomor-asuransi"
-											className="shadow appearance-none border rounded w-full py-2 px-4 text-gray-700 leading-tight focus:outline-none focus:shadow-outline text-xs"
+											className="shadow appearance-none border rounded w-full py-2 px-4 text-primary-gray leading-tight focus:outline-none focus:shadow-outline text-xs"
 											placeholder="Nomor Asuransi"
 										/>
 									</Suspense>

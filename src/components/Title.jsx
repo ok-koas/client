@@ -1,16 +1,16 @@
 import { Helmet } from "react-helmet";
 import PropTypes from "prop-types";
 
-export default function Title(props) {
-	const { separator, name } = props;
-
-	return (
-		<Helmet>
+export default function Title({ separator, name }) {
+	const title =
+		name !== "" ? (
 			<title>
-				{name} {separator} OK-Koas
+				{name} {separator} Ok-Koas
 			</title>
-		</Helmet>
-	);
+		) : (
+			<title>Ok-Koas</title>
+		);
+	return <Helmet>{title}</Helmet>;
 }
 
 Title.propTypes = {

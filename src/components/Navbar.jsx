@@ -14,13 +14,13 @@ const Navbar = () => {
 	};
 
 	return (
-		<nav className="bg-blue-50 fixed w-full z-20 top-0 start-0 border-b border-blue-200 shadow-md md:px-10 glass bg-opacity-30 select-none">
+		<nav className="bg-accent fixed w-full z-20 top-0 start-0 border-b border-blue-200 shadow-md md:px-10 glass bg-opacity-30 select-none">
 			<div className="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4">
 				<Logo isActive />
 				<div className="flex md:order-2 space-x-3 md:space-x-0 rtl:space-x-reverse">
 					<Link to="/login" onClick={handleLinkClick}>
 						<button
-							className="btn text-white bg-red-700 hover:bg-red-800  font-medium rounded-lg text-sm px-4 py-2 text-center dark:bg-red-600 dark:hover:bg-red-700  hidden md:flex"
+							className="btn btn-primary  hidden md:flex"
 							type="button"
 						>
 							Masuk
@@ -81,7 +81,7 @@ const Navbar = () => {
 									if (isPending) {
 										classNames += " text-gray-700";
 									} else if (isActive) {
-										classNames += " text-blue-600";
+										classNames += " text-secondary";
 									} else if (isTransitioning) {
 										classNames += " animate-bounce";
 									}
@@ -101,7 +101,7 @@ const Navbar = () => {
 									if (isPending) {
 										classNames += " text-gray-700";
 									} else if (isActive) {
-										classNames += " text-blue-600";
+										classNames += " text-secondary";
 									} else if (isTransitioning) {
 										classNames += " animate-bounce";
 									}
@@ -121,7 +121,7 @@ const Navbar = () => {
 									if (isPending) {
 										classNames += " text-red-700";
 									} else if (isActive) {
-										classNames += " text-blue-600";
+										classNames += " text-secondary";
 									} else if (isTransitioning) {
 										classNames += " animate-bounce";
 									}

@@ -4,7 +4,7 @@ import PeopleDiscussingImage from "../../components/PeopleDiscussingImage";
 const TentangKami = () => {
 	return (
 		<>
-			<div className="container  mx-auto px-8 md:px-40">
+			<div className="container mb-10 mx-auto px-8 md:px-40">
 				<h1 className="text-xl sm:text-3xl font-bold mb-6 md:mb-3 lg:mb-0">
 					Tentang OK-Koas
 				</h1>

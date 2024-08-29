@@ -7,7 +7,7 @@ const KirimOtp = () => {
 	return (
 		<>
 			<div className="flex items-center justify-center py-20 bg-gray-100">
-				<form className="w-64 md:w-80 lg:w-96 h-auto bg-white flex flex-col items-center justify-center p-5 gap-5 relative shadow-md rounded-lg">
+				<form className="w-64 md:w-80 lg:w-96 h-auto bg-neutral flex flex-col items-center justify-center p-5 gap-5 relative shadow-md rounded-lg">
 					<span className="text-lg md:text-xl lg:text-2xl font-bold text-black">
 						Masukkan OTP
 					</span>
@@ -36,25 +36,25 @@ const KirimOtp = () => {
 						required
 						maxLength="1"
 						type="text"
-						className="bg-gray-300 w-8 h-8 md:w-10 md:h-10 lg:w-12 lg:h-12 text-center border-none rounded-md caret-blue-500 text-gray-700 outline-none font-semibold focus:bg-blue-100 transition duration-300"
+						className="bg-gray-300 w-8 h-8 md:w-10 md:h-10 lg:w-12 lg:h-12 text-center border-none rounded-md caret-accent0 text-gray-700 outline-none font-semibold focus:bg-blue-100 transition duration-300"
 					/>
 					<input
 						required
 						maxLength="1"
 						type="text"
-						className="bg-gray-300 w-8 h-8 md:w-10 md:h-10 lg:w-12 lg:h-12 text-center border-none rounded-md caret-blue-500 text-gray-700 outline-none font-semibold focus:bg-blue-100 transition duration-300"
+						className="bg-gray-300 w-8 h-8 md:w-10 md:h-10 lg:w-12 lg:h-12 text-center border-none rounded-md caret-accent0 text-gray-700 outline-none font-semibold focus:bg-blue-100 transition duration-300"
 					/>
 					<input
 						required
 						maxLength="1"
 						type="text"
-						className="bg-gray-300 w-8 h-8 md:w-10 md:h-10 lg:w-12 lg:h-12 text-center border-none rounded-md caret-blue-500 text-gray-700 outline-none font-semibold focus:bg-blue-100 transition duration-300"
+						className="bg-gray-300 w-8 h-8 md:w-10 md:h-10 lg:w-12 lg:h-12 text-center border-none rounded-md caret-accent0 text-gray-700 outline-none font-semibold focus:bg-blue-100 transition duration-300"
 					/>
 					<input
 						required
 						maxLength="1"
 						type="text"
-						className="bg-gray-300 w-8 h-8 md:w-10 md:h-10 lg:w-12 lg:h-12 text-center border-none rounded-md caret-blue-500 text-gray-700 outline-none font-semibold focus:bg-blue-100 transition duration-300"
+						className="bg-gray-300 w-8 h-8 md:w-10 md:h-10 lg:w-12 lg:h-12 text-center border-none rounded-md caret-accent0 text-gray-700 outline-none font-semibold focus:bg-blue-100 transition duration-300"
 					/>
 				</div> */}
 					<button

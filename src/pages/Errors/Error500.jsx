@@ -14,7 +14,7 @@ const Error500 = () => {
 			</div>
 			<div className="w-1/2 lg:h-full flex lg:items-end justify-center p-4">
 				<svg
-					className="w-full text-blue-600"
+					className="w-full text-secondary"
 					xmlns="http://www.w3.org/2000/svg"
 					data-name="Layer 1"
 					viewBox="0 0 1119.609 699"

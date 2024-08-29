@@ -3,11 +3,11 @@ import DoubleRegisterButton from "./DoubleRegisterButton";
 
 const Hooker = () => {
 	return (
-		<div className="bg-blue-50 flex justify-center py-16">
-			<div className="relative bg-white shadow-md py-8 px-4 md:px-12 rounded-lg max-w-4xl flex flex-col md:flex-row items-center space-y-8 md:space-y-0 md:space-x-8">
+		<div className="bg-accent flex justify-center py-16">
+			<div className="relative bg-neutral shadow-md py-8 px-4 md:px-12 rounded-lg max-w-4xl flex flex-col md:flex-row items-center space-y-8 md:space-y-0 md:space-x-8">
 				<div className="w-1/2 md:w-full text-center md:text-left">
 					<h2 className="text-2xl font-bold text-black mb-4">
-						Bergabunglah dengan OK-<span className="text-blue-500">Koas</span>{" "}
+						Bergabunglah dengan OK-<span className="text-accent0">Koas</span>{" "}
 						Sekarang!
 					</h2>
 					<p className="mb-8">

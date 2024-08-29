@@ -2,8 +2,8 @@ import { useState } from "react";
 import { FaUser, FaLock } from "react-icons/fa"; // Import ikon dari react-icons
 import axios from "axios"; // Import Axios
 import Logo from "../../components/Logo";
-import { SERVER_URL } from "../../App";
 import { Link } from "react-router-dom";
+import getServerURL from "../../util/env-variables/server-url";
 
 const Login = () => {
 	const [formData, setFormData] = useState({
@@ -40,7 +40,7 @@ const Login = () => {
 		} else {
 			setErrors({});
 			axios
-				.post(SERVER_URL, formData)
+				.post(getServerURL(), formData)
 				.then((response) => {
 					alert(response.data.username);
 					console.log("Form submitted successfully:", response.data.username);
@@ -54,7 +54,7 @@ const Login = () => {
 	return (
 		<>
 			<div className="container mx-auto sm:px-4 md:py-10 ">
-				<div className="bg-white shadow-md rounded-lg p-8 max-w-md mx-auto">
+				<div className="bg-neutral shadow-md rounded-lg p-8 max-w-md mx-auto">
 					<div className="text-center mb-6">
 						<Logo size="4xl" />
 						{/* <img src={icon} alt="Login" className="w-48 h-auto mx-auto" />{" "} */}
@@ -63,13 +63,13 @@ const Login = () => {
 					<form onSubmit={handleSubmit}>
 						<div className="mb-4">
 							<label
-								className="block text-gray-700 text-sm font-bold mb-2 select-none"
+								className="block text-primary-gray text-sm font-bold mb-2 select-none"
 								htmlFor="username"
 							>
 								Username
 							</label>
 							<div className="flex items-center border rounded-md">
-								<FaUser className="text-gray-500 mx-3" />
+								<FaUser className="text-primary-gray mx-3" />
 
 								<input
 									type="text"
@@ -90,14 +90,14 @@ const Login = () => {
 						</div>
 						<div className="mb-4">
 							<label
-								className="block text-gray-700 text-sm font-bold mb-2 select-none"
+								className="block text-primary-gray text-sm font-bold mb-2 select-none"
 								htmlFor="password"
 							>
 								Password
 							</label>
 
 							<div className="flex items-center border rounded-md">
-								<FaLock className="text-gray-500 mx-3" />
+								<FaLock className="text-primary-gray mx-3" />
 								<input
 									name="password"
 									type="password"
@@ -133,25 +133,25 @@ const Login = () => {
 						<div className="text-center mt-4">
 							<button type="submit" className="btn btn-primary w-full">
 								{/* <FaSignInAlt className="text-lg" /> */}
-								Login
+								Masuk
 							</button>
 						</div>
 						<div className="text-center mt-4">
-							<div className="divider divider-secondary text-gray-500 text-sm md:text-base">
+							<div className="divider divider-secondary text-primary-gray text-sm md:text-base">
 								Atau
 							</div>
 						</div>
 						{/* <div className="text-center mt-2">
               <button
                 type="button"
-                className="flex items-center justify-center gap-2 bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline w-full"
+                className="flex items-center justify-center gap-2 bg-accent0 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline w-full"
               >
                 <FaGoogle className="text-lg" />
                 Login with Google
               </button>
             </div> */}
 						<div className="flex items-center justify-center mt-4 text-sm md:text-base">
-							<span className="text-gray-600">Belum mempunyai akun?</span>
+							<span className="text-primary-gray">Belum mempunyai akun?</span>
 							<Link
 								to="/register"
 								className="text-red-500 hover:text-red-700 ml-2 flex items-center"

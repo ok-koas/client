@@ -3,7 +3,7 @@ import { FaUser, FaUserMd } from "react-icons/fa";
 const ChooseLogin = () => {
 	return (
 		<div className="flex flex-col items-center justify-center py-20">
-			<div className="rounded-3xl p-6 bg-white shadow-xl max-w-lg w-full pt-6 pb-8 ">
+			<div className="rounded-3xl p-6 bg-neutral shadow-xl max-w-lg w-full pt-6 pb-8 ">
 				<h2 className="text-2xl font-semibold mb-6 text-center">
 					Ingin Masuk Sebagai Apa?
 				</h2>

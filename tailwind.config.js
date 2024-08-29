@@ -1,26 +1,66 @@
-const { default: daisyui } = require("daisyui");
+import daisyui from "daisyui";
+import { night, light } from "daisyui/src/theming/themes";
 
-module.exports = {
+export default {
 	content: ["./index.html", "./src/**/*.{js,ts,jsx,tsx}"],
 	theme: {
 		fontFamily: {
 			"seymour-one": "Seymour One",
 		},
 	},
-	plugins: [require("daisyui")],
+	plugins: [daisyui],
 	daisyui: {
 		themes: [
+			"night",
+			{
+				night: {
+					...night,
+					primary: "#EC221F",
+					"primary-content": "white",
+					"pale-blue": "#BFDFFE",
+					secondary: "aqua",
+					"secondary-content": "black",
+					accent: "#152238",
+					"accent-content": "white",
+					neutral: "#23395d",
+					"neutral-content": "white",
+					footer: "#4779C4",
+					"footer-content": "white",
+					"primary-gray": "gray",
+					".menu li > *:not(ul):not(.menu-title):not(details).active": {
+						color: "neutral-content",
+						"background-color": "neutral",
+					},
+					".menu li > *:not(ul):not(.menu-title):not(details):hover": {
+						"background-color": "#BFDFFE",
+						color: "#000000",
+					},
+				},
+			},
 			"light",
 			{
 				light: {
-					...require("daisyui/src/theming/themes").light,
+					...light,
 					primary: "#EC221F",
 					"primary-content": "#EFF7FF",
-					"secondary-bg": "#BFDFFE",
+					"pale-blue": "#BFDFFE",
 					secondary: "#28666E",
 					"secondary-content": "white",
-					accent: "#F4E409",
-					"accent-content": "#160C28",
+					accent: "#eff6ff",
+					"accent-content": "black",
+					neutral: "white",
+					"neutral-content": "black",
+					footer: "#BFDFFE",
+					"footer-content": "black",
+					"secondary-gray": "gray-700",
+					".menu li > *:not(ul):not(.menu-title):not(details).active": {
+						color: "#000000",
+						"background-color": "white",
+					},
+					".menu li > *:not(ul):not(.menu-title):not(details):hover": {
+						"background-color": "#BFDFFE",
+						color: "#000000",
+					},
 				},
 			},
 		],
