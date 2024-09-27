@@ -1,4 +1,4 @@
-import DoubleRegisterButton from "../../components/DoubleRegisterButton";
+import PasienRegisterButton from "../../components/PasienRegisterButton";
 import PeopleDiscussingImage from "../../components/PeopleDiscussingImage";
 
 const TentangKami = () => {
@@ -35,7 +35,7 @@ const TentangKami = () => {
 							khusus untuk mendukung kebutuhan koas dalam lingkungan klinis yang
 							dinamis dan penuh tuntutan.
 						</p>
-						<DoubleRegisterButton />
+						<PasienRegisterButton />
 					</div>
 					<div className="hidden lg:w-1/2 mt-6 lg:mt-0 lg:flex lg:justify-center">
 						<PeopleDiscussingImage />

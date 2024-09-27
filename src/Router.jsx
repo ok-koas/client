@@ -3,6 +3,7 @@ import GuestPage from "./layouts/guest-page";
 import ErrorPage from "./pages/Errors/ErrorPage";
 import AdminDashboard from "./layouts/admin-dashboard";
 import HomePage from "./pages/guest/HomePage";
+import Beranda from "./pages/guest/Beranda";
 import SuspendedPage from "./components/suspended-page";
 import * as lazy from "./components/lazy-components";
 
@@ -14,7 +15,7 @@ const routerConfig = createBrowserRouter([
 		children: [
 			{
 				index: true,
-				element: <SuspendedPage title="" component={HomePage} />,
+				element: <SuspendedPage title="" component={Beranda} />,
 				handle: { breadcrumb: "Home" },
 			},
 			{
@@ -57,6 +58,11 @@ const routerConfig = createBrowserRouter([
 				path: "login",
 				element: <SuspendedPage title="Login" component={lazy.Login} />,
 				handle: { breadcrumb: "Login" },
+			},
+			{
+				path: "tanya-dokter",
+				element: <SuspendedPage title="Login" component={lazy.Tanyadokter} />,
+				handle: { breadcrumb: "tanya dokter" },
 			},
 			{
 				path: "*",

@@ -7,6 +7,7 @@ export const Error404 = lazy(() => import("../pages/Errors/Error404"));
 export const KirimOtp = lazy(() => import("../pages/guest/KirimOtp"));
 export const VerifBerkas = lazy(() => import("../pages/guest/VerifBerkas"));
 export const ChooseLogin = lazy(() => import("../pages/guest/ChooseLogin"));
+export const Tanyadokter = lazy(() => import("../pages/guest/Tanyadokter"));
 export const UserManagement = lazy(
 	() => import("../pages/admin/user-management"),
 );

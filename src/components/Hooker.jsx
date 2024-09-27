@@ -1,5 +1,4 @@
-import React from "react";
-import DoubleRegisterButton from "./DoubleRegisterButton";
+import DoubleRegisterButton from "./PasienRegisterButton";
 
 const Hooker = () => {
 	return (

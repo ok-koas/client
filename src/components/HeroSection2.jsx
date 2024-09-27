@@ -1,4 +1,4 @@
-import DoubleRegisterButton from "./DoubleRegisterButton";
+import PasienRegisterButton from "./PasienRegisterButton";
 
 const HeroSection = () => {
 	return (
@@ -11,7 +11,7 @@ const HeroSection = () => {
 					<p className="text-xl lg:text-2xl mt-4 font-bold md:mt-0">
 						Solusi Praktis dan Efisien Untuk Mahasiswa Koas
 					</p>
-					<DoubleRegisterButton />
+					<PasienRegisterButton />
 				</div>
 				<div className="relative hidden md:flex flex-col justify-center items-center mt-10 md:mt-0">
 					<div className="absolute">
