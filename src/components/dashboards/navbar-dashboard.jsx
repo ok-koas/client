@@ -20,22 +20,22 @@ export default function NavbarDashboard() {
 			</div>
 			<div className="flex-none">
 				<div className="dropdown dropdown-hover dropdown-end">
-					<div tabIndex={0} role="button" className="btn btn-ghost btn-circle">
+					<button type="button" className="btn btn-ghost btn-circle">
 						<div className="indicator">
 							<FaBell className="w-5 h-5" />
 							<span className="badge badge-sm badge-primary indicator-item">
 								8
 							</span>
 						</div>
-					</div>
+					</button>
 					<div className="card card-compact dropdown-content bg-neutral z-[1] w-52 shadow">
 						<div className="card-body">
-							<span className="text-lg font-bold">8 Items</span>
-							<span className="text-info">Subtotal: $999</span>
+							<span className="text-lg font-bold">8 New Messages</span>
+							{/* <span className="text-info">Subtotal: $999</span> */}
 							<div className="card-actions">
-								<button className="btn btn-primary btn-block" type="button">
+								{/* <button className="btn btn-primary btn-block" type="button">
 									View cart
-								</button>
+								</button> */}
 							</div>
 						</div>
 					</div>
