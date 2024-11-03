@@ -11,7 +11,7 @@ const PasienRegisterButton = () => {
                     className="btn btn-outline rounded-r-full border-l-0"
                     type="button"
                 >
-                    Informasi Lebih Lanjut
+                    <a href="/tentang-kami">Informasi Lebih Lanjut</a>
                 </button>
             </div>
         </div>

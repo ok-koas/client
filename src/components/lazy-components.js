@@ -8,6 +8,10 @@ export const KirimOtp = lazy(() => import("../pages/guest/KirimOtp"));
 export const VerifBerkas = lazy(() => import("../pages/guest/VerifBerkas"));
 export const ChooseLogin = lazy(() => import("../pages/guest/ChooseLogin"));
 export const Tanyadokter = lazy(() => import("../pages/guest/Tanyadokter"));
+export const Chatdokter = lazy(() => import("../pages/dokter/Chatdokter"));
+export const Chatpasien = lazy(() => import("../pages/Pasien/Chatpasien"));
+export const stepbystep = lazy(() => import("../pages/guest/stepbystep"));
+export const JadwalPengingat = lazy(() => import("../pages/guest/JadwalPengingat.jsx"));
 export const UserManagement = lazy(
 	() => import("../pages/admin/user-management"),
 );

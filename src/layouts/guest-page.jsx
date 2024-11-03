@@ -7,7 +7,7 @@ export default function GuestPage() {
 	return (
 		<>
 			<Helmet>
-				<body className="bg-accent pt-24"/>
+				<body className="bg-accent" />
 			</Helmet>
 			<Navbar />
 			<main className="pt-24">

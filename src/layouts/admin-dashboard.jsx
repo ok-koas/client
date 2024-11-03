@@ -4,7 +4,7 @@ import SidebarList from "../components/admin-dashboard/sidebar-list";
 import { FaTooth, FaUserInjured } from "react-icons/fa";
 import { FaUsersGear } from "react-icons/fa6";
 import { Outlet } from "react-router-dom";
-
+         
 export default function AdminDashboard() {
 	return (
 		<div className="drawer lg:drawer-open">

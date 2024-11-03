@@ -1,4 +1,3 @@
-import React from "react";
 import DoubleRegisterButton from "./DoubleRegisterButton";
 
 const Hookers2 = () => {
