@@ -2,7 +2,6 @@
 	import GuestPage from "./layouts/guest-page";
 	import ErrorPage from "./pages/Errors/ErrorPage";
 	import AdminDashboard from "./layouts/admin-dashboard";
-	import HomePage from "./pages/guest/HomePage";
 	import Beranda from "./pages/guest/Beranda";
 	import SuspendedPage from "./components/suspended-page";
 	import * as lazy from "./components/lazy-components";

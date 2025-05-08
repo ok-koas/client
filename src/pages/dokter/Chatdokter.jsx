@@ -1,6 +1,6 @@
 import { useState, useRef } from 'react';
 import { FaEllipsisV, FaPaperclip, FaTrash } from 'react-icons/fa';
-import { useNavigate } from 'react-router-dom'; // Import useNavigate
+import { useNavigate } from 'react-router-dom';
 
 const Chatdokter = () => {
   const [messages, setMessages] = useState([]);
@@ -8,8 +8,9 @@ const Chatdokter = () => {
   const [image, setImage] = useState(null);
   const [view, setView] = useState('welcome');
   const [showMenu, setShowMenu] = useState(false);
+  const [alertCount, setAlertCount] = useState(1); // New state for alert count
   const mainContentRef = useRef(null);
-  const navigate = useNavigate(); // Initialize navigate
+  const navigate = useNavigate();
 
   const scrollToMainContent = () => {
     if (mainContentRef.current) {
@@ -29,6 +30,9 @@ const Chatdokter = () => {
       setMessages((prevMessages) => [...prevMessages, newMsg]);
       setNewMessage('');
       setImage(null);
+
+      // Reset alert count to 0 on sending a message
+      setAlertCount(0);
     }
   };
 
@@ -55,7 +59,7 @@ const Chatdokter = () => {
   };
 
   const handleKembali = () => {
-    navigate('/');
+    navigate('/'); // Navigate back to the home page
     setShowMenu(false);
   };
 
@@ -100,8 +104,16 @@ const Chatdokter = () => {
               src="https://randomuser.me/api/portraits/men/32.jpg"
               alt="Patient"
             />
-            <div>
+            <div className="flex flex-col">
               <p className="font-semibold text-lg">Pasien</p>
+              <p className="text-sm text-gray-500">{newMessage || 'You sent a photo.'}</p> {/* Message preview */}
+            </div>
+            <div className="ml-auto relative">
+              {alertCount > 0 && (
+                <span className="absolute -top-1 -right-1 text-xs bg-red-500 text-white rounded-full px-1.5">
+                  {alertCount}
+                </span>
+              )}
             </div>
           </div>
         </div>
@@ -133,8 +145,8 @@ const Chatdokter = () => {
                     <div className="w-10 rounded-full">
                       <img
                         src={msg.sender === 'doctor'
-                          ? 'https://img.freepik.com/premium-vector/cartoon-illustration-doctor_272293-4605.jpg'
-                          : 'https://randomuser.me/api/portraits/men/32.jpg'}
+                          ? 'https://randomuser.me/api/portraits/men/32.jpg'
+                          : 'https://img.freepik.com/premium-vector/cartoon-illustration-doctor_272293-4605.jpg'}
                         alt={msg.sender}
                       />
                     </div>

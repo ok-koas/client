@@ -29,6 +29,15 @@ const Chatpasien = () => {
       setMessages((prevMessages) => [...prevMessages, newMsg]);
       setNewMessage('');
       setImage(null);
+       setTimeout(() => {
+        const autoReply = {
+          sender: 'doctor',
+          text: 'Terima Kasih Telah Menghubungi Kami, Saya Alihkan Ke Dokter Kami.',
+          time: new Date().toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' }),
+          image: null,
+        };
+        setMessages((prevMessages) => [...prevMessages, autoReply]);
+      }, 1000);
     }
   };
 
@@ -100,8 +109,12 @@ const Chatpasien = () => {
               src="https://img.freepik.com/premium-vector/cartoon-illustration-doctor_272293-4605.jpg"
               alt="Dokter"
             />
-            <div>
+            <div className="flex-1">
               <p className="font-semibold">Dokter</p>
+              <p className="text-sm text-gray-500">{newMessage || 'You sent a photo.'}</p>
+            </div>
+            <div className="flex items-center justify-center bg-red-500 text-white w-6 h-6 rounded-full text-sm font-semibold">
+              1
             </div>
           </div>
         </div>
